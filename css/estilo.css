@@ -1,0 +1,458 @@
+		*{
+			font-size: 16px;
+		}
+		body {
+			color: black;
+			font-family: "segoe-ui", "open-sans", tahoma, arial;
+			padding: 0;
+			margin: 0;
+			background-image: linear-gradient(90deg, #c7c7c71f 0, #3a3a3a1c 33%, #b1afaf85 66%, #6a6a6b66 100%);
+		}
+		table {
+			margin: 10px 5px;
+			font-family: "Lucida Sans Unicode", "Lucida Grande", "Segoe Ui";
+			box-shadow: 4px 4px 8px 2px #00000070;
+		}
+
+		h1 {
+			margin: 25px auto 0;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		div {
+			text-align: center;
+			text-transform: uppercase;
+		}
+		#consultas div{
+			margin: 5px auto;
+		}
+
+		table td {
+			transition: all .5s;
+		}
+		
+		/* Table */
+		.tabla_datos td{
+			font-size: 14px !important;
+		}
+
+		.tabla_datos th, 
+		.tabla_datos td {
+			border: 1px solid #e1edff;
+    		text-align: center !important;
+    		padding: 2px 2px;
+		}
+		.tabla_datos caption {
+			margin: 7px;
+		}
+
+		/* Table Header */
+		#titulo {
+			background-color: #508abb;
+			color: #FFFFFF;
+			border-color: #6ea1cc !important;
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		/* Table Body */
+		
+		.tabla_datos tbody td:first-child,
+		.tabla_datos tbody td:nth-child(4),
+		.tabla_datos tbody td:last-child {
+			text-align: right;
+		}
+
+		.tabla_datos tbody tr:nth-child(odd) td {
+			background-color: #f4fbff;
+		}
+		.tabla_datos tbody tr:hover td {
+			background-color: #ffffa2;
+			border-color: #ffff0f;
+		}
+
+		/* Table Footer */
+		.tabla_datos tfoot th {
+			background-color: #e5f5ff;
+			text-align: right;
+		}
+		.tabla_datos tfoot th:first-child {
+			text-align: left;
+		}
+		.tabla_datos tbody td:empty
+		{
+			background-color: #ffcccc;
+		}
+
+		#ing{
+			    padding: 0px 0px;
+		}
+		tbody, td, tfoot, th, thead, tr {
+		    border-color: black;
+	    	border-style: solid;
+		    border-width: 1px;
+		}
+		#caja_busqueda{
+			border-radius: 10px !important;
+		    padding: unset;
+		    padding-left: 3px;
+		    flex: unset !important;
+		    min-width: 90px;
+    		width: 25%;
+		}
+		.input-group {
+ 		   justify-content: center;
+		}
+		.input-group-text {
+			height: 30px; 
+ 		 	border-radius: 10px !important;
+		    border-color: #233d7b;
+		    margin-right: 10px;
+		}
+		.tabla_datos tbody tr td {
+    		background-color: #f4fbff;
+		}		
+
+		#nb{
+			width: 80px;
+		}
+		#sb{
+			width: 48px;
+		}
+		#rb{
+			width: 40px;
+		}
+		#ab{
+			width: 68px;
+		}
+		#tb{
+			width: 42px;
+		}
+		#ib{
+			width: 90px;;
+		}	
+		#ob{
+			width: 210px;
+		}
+
+		#logo {
+	    	margin-top: 10px;
+    		width: 90%;
+    		max-width: 550px;
+		}	
+
+	.nav-pills .nav-link{
+        border-radius: 10px;
+    margin: 0px 3px;
+    padding: 7px 12px;
+    font-weight: bolder;
+    box-shadow: 2px 3px 5px 1px #00000070;
+    }
+	.nav-pills .nav-link.active:hover{
+	    background-color: #0b4292;
+	    cursor: pointer;
+	}
+	.nav-pills .nav-link:hover{
+	    background-color: #0b4292;
+	    color: white;
+	    border-radius: 10px;
+	    cursor: pointer;
+	}
+
+	a {
+    	color: #233d7b;
+	}
+	header{
+    	max-height: 125px;
+    	width: fit-content;
+	}
+	#tabs{
+		display: flex;
+		margin: 10px auto;
+	}
+	#tab{
+		display: flex;
+		margin: 10px auto;
+	}
+	table tbody tr  td {
+    	background-color: #f4fbff;
+    	padding: 0px 5px;
+	}
+	table tbody tr:hover td {
+			background-color: #ffffa2;
+			border-color: #ffff0f;
+		}
+/*	#ta{
+  		  min-width:  1050px !important;
+  		}
+*/  		.gen table tr td{
+			 min-width: 20px !important;
+		}
+  		.tabin{
+			display: flex;
+		}
+
+		.tabs2{
+			display: flex;
+		}
+		#in {
+		    font-weight: bold;
+	    	text-align: center;
+    		padding: 0px 5px;
+		}
+		#s{
+			width: 140px;
+		}
+		#r{
+			width: 145px;
+		}
+		#t{
+			width: 140px;
+		}	
+		#a{
+			width: 140px;
+		}
+
+		.buscar #titulo{
+			text-transform: capitalize;
+		}
+.progress {
+    height: 1.5rem;
+    background-color: #ff040494;
+}
+.progress-bar{
+    background-color: #17e217;
+    color: black;	
+}
+.tabla_datos .btn{
+  	padding: 3px;
+}
+.form-control {
+    width: unset;
+    font-weight: unset;
+    border-radius: 10px !important;
+    padding: unset;
+    padding-left: 3px;
+    border-color: #f7f718;
+    flex: unset !important;
+    }
+select {
+    border-radius: 10px !important;
+    height: 30px;
+    border-color: #f7f718;
+    background: #ffffff;
+}
+
+#titulo3 td{
+	padding: 0px;
+}
+
+#ing td{
+			font-size: 12px !important;
+		}
+
+.tabla_datos3{
+	margin: 0px;
+}
+.tabla_datos{
+	margin: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 900px){	
+	table{
+		margin: 10px .5vw;
+	}
+	.tabin{
+			display: inline-block;
+			margin-right: 5px !important;
+		}
+	.tabs2{
+			display: block;
+			margin: 0;
+		}
+}
+
+
+
+
+
+
+ @media screen and (max-width: 830px){
+ 	
+	.tabla_datos3 {
+    	display: none;
+	}
+	#ob {
+   	 	display: none;
+   	}
+   	#ing {
+    	display: none;
+	}
+
+	#ta{
+		min-width: 352px;
+	}
+
+	#nb{
+		}
+		#nomb{
+		}
+		#sb{
+			writing-mode: vertical-lr;
+		}
+		#rb{
+			writing-mode: vertical-lr;
+		}
+		#ab{
+			writing-mode: vertical-lr;
+		}
+		#tb{
+			writing-mode: vertical-lr;
+		}	
+		#ib{
+			writing-mode: vertical-lr;
+		}	
+		#ob{
+			writing-mode: vertical-lr;
+		}
+		.cel{
+			writing-mode: horizontal-tb !important;
+		}
+ }
+
+
+
+
+
+
+
+@media screen and (max-width: 550px){
+	table{
+		margin: 10px 1vw;
+	}
+		*{
+			font-size: 14px;
+		}
+		
+		.btn{
+			font-size: 13px;
+			padding: 2px 2px;
+		}
+  		#nb{
+			width: 60px;
+		}
+		#nomb{
+		    width: 50px;
+		}
+		#sb{
+			width: 38px;
+		}
+		#rb{
+			width: 32px;
+		}
+		#ab{
+			width: 51px;
+		}
+		#tb{
+			width: 32px;
+		}	
+		#ib{
+			width: 38px;;
+		}	
+		#ob{
+			width: 198px;
+		}
+		.tabla_datos td{
+			font-size: 12px !important;
+		}
+		
+		#s{
+			font-size: 12px;
+			width: 90px;
+		}
+		#r{
+			font-size: 12px;
+			width: 100px;
+		}
+		#t{
+			font-size: 12px;
+			width: 100px;
+		}	
+		#a{
+			font-size: 12px;
+			width: 58px;
+		}
+		#ing td{
+			font-size: 10px !important;
+		}
+		
+	}
+
+
+
+
+
+
+
+ @media screen and (max-width: 500px){
+ 	.progress-bar{
+    	height: 1rem;
+    	overflow: initial;
+    	background-color: #e9ecef;
+    	border-radius: .25rem;
+    	display: contents;
+	}
+	.progress {
+    	height: unset;
+    	background-color: unset;
+    	width: 20px;
+    	float: right;
+	}
+ 	html{
+ 		min-width: 345px;
+ 	}
+	.nav-pills .nav-link{
+    	padding: 6px 6px;
+	}
+	select, .form-control{
+    	height: 24px;
+	}
+  	h4{
+    	font-size: 15px !important;
+  	}
+	#aceptar {
+    	border-radius: 5px;
+    	height: 24px;
+    	width: 110px;
+    	padding: 0px;
+	}
+	#tabs #titulo td{
+		width: 70px;
+	}
+	.campomodi {
+    	display: none;
+	}
+ }

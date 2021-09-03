@@ -1,0 +1,609 @@
+header{
+  width: 95%;    
+  max-width: 822px;
+  /*max-height:  80px;*/
+    background-color: #f7f718c2;
+    border-radius: 17px;
+    box-shadow: 0px 4px 10px 0px #00000070;
+    margin: 15px 0px;
+}
+
+ 
+#menuA{
+    background: none;
+    box-shadow: none;
+    width: fit-content;
+    }
+*{
+  margin: 0;
+  }    
+html{
+    min-width: 300px; 
+}
+a{
+  color: #000000;
+  font-weight: bolder;
+  text-decoration: none;
+  font-size: 17px;
+}
+#logo{
+    border-radius: 10px;
+    margin-top: 2px;
+    width: 95%;
+    max-width: 550px;
+  /*  min-width: 300px;*/
+    border-radius: 10px;
+}
+form{
+  padding: 10px;
+  border-radius: 27px;
+    box-shadow: 0px 4px 10px 0px #00000070;
+    background-image: linear-gradient(90deg , #fffdfd0d 0, 
+      #92919123 25%, #7b787845 50%, #50505266 75%,#4e4e4e7d 100%) 
+}
+#agrega{
+  margin-top: 15px;
+  width: 95%;
+  max-width:822px;
+}
+body{
+  font-size: 17px;
+    background-color: #dcdcdca8;
+    color: black;
+    flex: unset;
+    min-width: 300px; 
+ }
+
+table{
+ width: 95%;
+}
+.intab{
+  width:90%;
+}
+.num{
+  width: 20%;
+}
+.tdtab{
+  width: 33%;
+}
+#fecha{
+  width: 170px;
+}
+
+nav {
+    position: absolute;
+    top: .5%;
+    right: 10%;
+    z-index: 3;
+}
+
+li {
+  padding: 0px 0px 3px 2px;
+}
+  .nav-pills .nav-link{
+    border-radius: 10px;
+    margin: 0px 1px;
+    font-weight: bolder;
+    border: 1px;
+    border-style: solid;
+    padding: 3px;
+    box-shadow: 0px 4px 10px 0px #00000070;
+    }
+
+  .nav-pills .nav-link:hover{
+      background-color: #0b4292;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+  }
+  .nav-pills a{
+    padding: 4px;
+  }
+
+#mod{
+  font-size: 14px;
+  width: fit-content;
+}
+
+#cara input{
+    max-width: 450px;
+    width: 95%;
+    flex: unset;
+}
+#cara .input-group {
+    margin: 4px;
+  }
+#cara td{
+    padding-right: 0px;
+    border-color: inherit;
+  }
+
+input{
+  width: 195px;
+  height: 30px;
+  flex: unset;
+  border:1px solid #fafafa;
+}
+select{
+  font-size: 17px;
+  border-radius: 10px !important;
+  height: 30px;
+  border-color: #f7f718;
+    background: #ffffff;
+}
+
+.tdtab2
+{
+  width:290px;
+  text-align: -webkit-right;
+}
+.tdtab2 div
+{
+  width:290px;
+justify-content: flex-end;
+
+}
+
+#img{
+  max-height:  80px;
+  max-width: 900px;
+
+}
+
+
+.input-group-text {
+    height: 30px;
+    width: fit-content;
+    font-size: 17px;
+    padding: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px !important;
+    border-color: #233d7b;
+    flex: unset !important;
+    margin-right: 2px;
+    margin-bottom: 2px;
+white-space: unset;
+    }
+.form-control {
+    width: unset;
+    font-weight: unset;
+    border-radius: 10px !important;
+    padding: unset;
+    padding-left: 3px;
+    border-color: #f7f718;
+    flex: unset !important;
+    }
+
+#Fotografia{
+    width: auto;
+    height: 30px;
+    border: none;
+    color: #233d7b;
+    font-size: 16px;
+}
+
+
+
+#correoIn{
+  max-width: 50%;
+  width: 400px;
+  flex: unset;
+}
+
+#txtlargo{
+  max-width: 50%;
+  width: 320px;
+  flex: unset;
+}
+#largo{
+      min-width: 65%;
+      flex: unset;
+}
+#aceptar{
+    border-radius: 10px;
+    height: 30px;
+    width: 130px;
+    font-size: unset;
+    padding: unset;
+}
+
+#estudios{
+  width: 500px;
+  max-width: 85%;
+  flex: unset;
+}
+#padres input{
+width: 30%;
+}
+#padres span{
+width: 30%;
+}
+#padres div{
+width: unset;
+}
+#padres select{
+width: 25%;
+}
+
+
+#log{
+  background-color:#c0c0c085;
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px !important;
+}
+#login{
+  width: 80%;
+  max-width: 400px;
+  
+} 
+
+
+#btn{
+  border-radius: 10px;
+}
+#btn:hover{
+  border-color: #1e5c92;
+  cursor: pointer;
+}
+.btn{
+  font-size: unset;
+}
+#estudios{
+  padding-left: 10px;
+}
+
+
+
+#noC{
+    min-width: 80px;
+    width: 13%;
+}
+#tel{
+  flex: unset;
+    min-width: 100px;
+    width: 15%;
+}
+#n2d{
+  width: 8%;
+  min-width: 44px;
+  flex: unset;  
+}
+#n3d{
+  width: 11%;
+  min-width: 42px;
+  flex: unset;  
+}
+#fecha{
+    flex: unset;
+    min-width: 122px;
+    width: 22%;
+}
+
+#txtmedio{
+  max-width: 50%;
+  width: 400px;
+  flex: unset;
+}
+#txtcorto{
+  max-width: 47%;
+  width: 200px;
+  flex: unset;
+}
+.progress{
+      width: 66%;
+      background-color: #233d7b;
+      max-width: 822px;
+    min-width: 360px;
+}
+.progress-bar{
+    background-color: #e5e53b;
+}
+
+.form-check {
+    margin-bottom: unset !important;
+    min-height: auto;
+    padding-left: 10px !important;
+}
+.form-check-inline {
+    margin-right: 0px;
+}
+
+.form-check .form-check-input {
+  float: unset;
+  margin-left: 0px; 
+}
+
+.form-control {
+
+    border-radius: 10px !important;
+    padding: unset;
+    padding-left: 3px;
+    border-color: #f7f718;
+    flex: unset !important;
+    }
+.input-group {
+    justify-content: center;
+        margin-bottom: 13px;
+  }
+
+input{
+  border:1px solid #fafafa;
+}
+
+#noC{
+    min-width: 90px;
+    width: 17%;
+}
+#nc{
+    min-width: 280px;
+    width: 70%;
+}
+
+td{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    text-align: left;
+    font-size: 15px;
+    font: -webkit-control;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+#in{
+    width: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+g{
+    font-size: 25px !important;
+}
+
+#estudios{
+  width: 500px;
+  max-width: 85%;
+  flex: unset;
+}
+
+
+#sim td{
+  padding-left: 5px;
+}
+
+.modificar{
+    height: 85px;
+    width: fit-content;
+    min-width: 260px;
+    max-width: 400px;
+}
+.modificar input{
+  margin-bottom: 0px; 
+}
+.modificar #noC{
+  width: 40%;
+  height: 30px;
+}
+.modificar a{
+  padding: 4px;
+}
+.tipoModificar{
+  max-width: 600px !important;
+}
+#cre{
+  width: 55px;
+}
+#cre input{
+    width: 95%;
+}
+#imglog{
+}
+
+#rellenar{
+  flex-wrap: nowrap;
+}
+
+.nav-pills .nav-link {
+  color: black;  
+
+}
+
+#menuIndex{
+  padding: 10px 15px;
+  margin: 13px; 
+  box-shadow: 8px 4px 11px 7px #00000094;
+  text-transform: capitalize;
+  -webkit-transition: all .4s;
+  font-size: 18px;  
+  background-image: linear-gradient(32deg, #233d7bf5 0, 
+    #233d7b2b 40%, #f7f71873 60%, #f7f718 100%);
+    background-color: #0b4292;
+    color: white;
+}
+
+#menuIndex:hover{
+    -webkit-transform: scale(1.08);
+    box-shadow: 8px 4px 11px 7px #00000094;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------*/
+
+
+@media screen and (max-width: 740px){
+  *{
+    font-size: 14px;
+  }
+  .input-group-text {
+    font-size: 15px;
+    height: 24px;
+    white-space: unset;
+    height: auto;
+  }
+  select{
+    font-size: 14px;
+    height: 24px;
+  }
+  .form-control{
+    font-size: 14px;
+    height: 24px;
+  }
+  #Fotografia {
+    width: auto;
+    height: 24px;
+    font-size: 12px;
+    margin-bottom: 9px;
+  }
+  #login label{
+    font-size: 18px;
+  }
+  #login .form-control{
+    font-size: 18px;
+  }
+  #login #btn{
+    font-size: 18px;
+  }
+  #login .form-control{
+    font-size: 18px;
+    height: 30px;
+    margin-bottom: 15px;
+  }
+  .tdtab2 div{
+    width: 250px;
+  }
+  .tdtab2 {
+    width: 245px;
+  }
+
+  #ea{
+  height: auto;
+  }
+
+  #ea2{
+  height:auto;
+  }
+}
+
+@media screen and (max-width: 450px){
+
+  .nav-pills .nav-link{
+    font-size: 13px;
+  }
+
+  .input-group {
+    margin-bottom: 10px;
+  }
+  .input-group-text {
+    font-size: 14px;
+    margin-bottom: 0px;
+    white-space: unset;
+    height: auto;
+  }
+  select{
+    font-size: 14px;
+    height: 23px;
+  }
+  .form-check-input {
+    margin-bottom: 5px;
+  }
+  .form-control{
+    font-size: 14px;
+    height: 23px;
+    margin-bottom: 0px;
+
+  }
+
+  #login label{
+    font-size: 18px;
+  }
+  #login .form-control{
+    font-size: 18px;
+  }
+  #login #btn{
+    font-size: 18px;
+  }
+  #login .form-control{
+    font-size: 18px;
+    height: 30px;
+    margin-bottom: 15px;
+  }
+  td{
+    font-size: 13px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  h4{
+    font-size: 15px !important;
+  }
+  #aceptar {
+    border-radius: 10px;
+    width: 110px;
+    font-size: unset;
+    padding: unset;
+  }
+  #menuNormal ul li a{
+    font-size: 15px;
+    padding: 8px;
+
+  }
+  #menuNormal{
+  padding: 0px 5px;
+  }
+
+  
+
+  #in{
+    width: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding-left:  0px !important;
+  }
+
+  #cara input{
+    display: none;
+  }
+  #cara{
+  width: auto;
+  }
+}
+  
+  @media screen and (max-width: 450px){
+    .tdtab2 div {
+    justify-content: space-between;
+    }
+  }
+
