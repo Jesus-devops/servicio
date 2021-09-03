@@ -30,8 +30,11 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 <section>
 <form action="altaAlumno2.php" method = "post" enctype="multipart/form-data" id="agrega">
 	<?php 
-	$re=$mysql->query("select * from beca where noControl != NULL and noControl=".$_SESSION['noControl'])or die($mysql-> error);
-		
+	$re=$mysql->query("select * from beca where noControl=".$_SESSION['noControl'])or die($mysql-> error);
+		 $i="";$ni="";
+		 while ($f=$re->fetch_array()) { 		
+				$i=$f['Institucion']; $ni=$f['nombreInstitucion'];
+			}
 	 ?>
 	<br>
 		<div id="orden">
@@ -39,91 +42,100 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	<span class="input-group-text" >becado por</span>
 	<select name="institucion" required>
 		<option selected disabled value="">----------</option>
-		<option value="Gobierno federal" <?php while ($f=$re->fetch_array()) {  if ($f['institucion']=="Gobierno federal") {echo 'selected';}}?> >Gobierno federal</option>
-		<option value="Gobierno estatal" <?php while ($f=$re->fetch_array()) {  if ($f['institucion']=="Gobierno estatal") {echo 'selected';}}?> >Gobierno estatal</option>
-		<option value="Esfuerzos de bachillerato" <?php while ($f=$re->fetch_array()) {  if ($f['institucion']=="Esfuerzos de bachillerato") {echo 'selected';}}?> >Esfuerzos de bachillerato</option>
+		<option value="Gobierno federal" <?php if ($i=="Gobierno federal") {echo 'selected';}?> >Gobierno federal <?php while ($f=$re->fetch_array()) { 	echo $f['nombreInstitucion'];	} ?> </option>
+		<option value="Gobierno estatal" <?php if ($i=="Gobierno estatal") {echo 'selected';}?> >Gobierno estatal</option>
+		<option value="Esfuerzos de bachillerato" <?php if ($i=="Esfuerzos de bachillerato") {echo 'selected';}?> >Esfuerzos de bachillerato</option>
 	</select>
 </div>			
-<?php  ?>
 <div class="input-group">
-  <span class="input-group-text">Nombre de la institucion</span>
-  <input type="text" class="form-control" placeholder="Institucion" name="nombreInstitucion" id="estudios" value=<?php while ($f=$re->fetch_array()) { 	echo $f['Institucion'];	} ?>>
+  <span class="input-group-text">Nombre de la institucion </span>
+  <input type="text" class="form-control" placeholder="Institucion" name="nombreInstitucion" id="estudios" value=<?php echo $ni; ?> >
 </div>
-
+<?php 
+	$re2=$mysql->query("select * from trabajo where noControl=".$_SESSION['noControl'])or die($mysql-> error);
+		$ne="";$h="";
+		while ($f=$re2->fetch_array()) { 		
+				$ne=$f['nombreEmpresa']; $h=$f['horario'];
+			}
+	 ?>
 <div class="input-group">
   <span class="input-group-text">Nombre de empresa donde trabajas</span>
-  <input type="text" class="form-control" placeholder="Empresa" name="nombreEmpresa" id="txtlargo">
+  <input type="text" class="form-control" placeholder="Empresa" name="nombreEmpresa" id="txtlargo"  value=<?php echo $ne; ?> >
 </div>
 
 <div class="input-group">
   <span class="input-group-text">Horario</span>
 	<select name="horario" required>
 		<option selected disabled value="">-----</option>
-		<option value="matutino">Matutino</option>
-		<option value="vespertino">Vespertino</option>
-		<option value="nocturno">Nocturno</option>
+		<option value="matutino" <?php if ($h=="matutino") {echo 'selected';}?>>Matutino</option>
+		<option value="vespertino" <?php if ($h=="vespertino") {echo 'selected';}?>>Vespertino</option>
+		<option value="nocturno" <?php if ($h=="nocturno") {echo 'selected';}?>>Nocturno</option>
 	</select>
 </div>
 
+<?php 
+$re2=$mysql->query("select * from extra where noControl=".$_SESSION['noControl'])or die($mysql-> error);
+		while ($f=$re2->fetch_array()) { 		
+ ?>
 
 <span class="input-group-text">Donde realizaste tus estudios de:</span>
 <div class="input-group" style="display: block;">
-	<input type="text" name="primaria" required placeholder="Primaria" class="form-control" id="estudios">
-	<input type="text" name="secundaria" required placeholder="Secundaria" class="form-control" id="estudios">
-	<input type="text" name="prepa" required placeholder="Preparatoria" class="form-control" id="estudios">
-	<input type="text" name="estudiosSuperiores" required placeholder="Estudios Superiores" class="form-control" id="estudios">
+	<input type="text" name="primaria" required placeholder="Primaria" class="form-control" id="estudios" value=<?php echo $f['primaria']; ?>>
+	<input type="text" name="secundaria" required placeholder="Secundaria" class="form-control" id="estudios" value=<?php echo $f['secundaria']; ?>>
+	<input type="text" name="prepa" required placeholder="Preparatoria" class="form-control" id="estudios" value=<?php echo $f['prepa']; ?>>
+	<input type="text" name="estudiosSuperiores" required placeholder="Estudios Superiores" class="form-control" id="estudios" value=<?php echo $f['estudiosSuperiores']; ?>>
 </div>
 
 <div class="input-group">
   <span class="input-group-text">Fecha de nacimiento</span>
-  <input type="date" class="form-control" required  name="fechaDeNacimiento" id="fecha">
+  <input type="date" class="form-control" required  name="fechaDeNacimiento" id="fecha" value=<?php echo $f['fechaDeNacimiento']; ?>>
 </div>
 
 <div class="input-group">
   <span class="input-group-text">Lugar de nacimiento</span>
-  <input type="text" class="form-control" placeholder="Lugar de nacimiento"  required  name="lugarDeNacimiento" id="estudios">
+  <input type="text" class="form-control" placeholder="Lugar de nacimiento"  required  name="lugarDeNacimiento" id="estudios" value=<?php echo $f['lugarDeNacimiento']; ?>>
 </div>
 	
 <div class="input-group">
   <span class="input-group-text">Peso (kg)</span>
-  <input type="number" class="form-control" required placeholder="N" required="true" name="peso" id="n2d" min="0">
+  <input type="number" class="form-control" required placeholder="N" required="true" name="peso" id="n2d" min="0" value=<?php echo $f['peso']; ?>>
 </div><div class="input-group">
   <span class="input-group-text">Estatura (cm)</span>
-  <input type="number" class="form-control" required name="estatura" placeholder="N" required id="n2d" min="0">
+  <input type="number" class="form-control" required name="estatura" placeholder="N" required id="n2d" min="0" value=<?php echo $f['estatura']; ?>>
 </div>
 
 <div class="input-group">
 	<span class="input-group-text" >Estado civil</span>
 	<select name="estadoCivil" required>
 		<option selected disabled value="">-----</option>
-		<option value="soltero">Soltero(a)</option>
-		<option value="casado">Casado(a)</option>
-		<option value="divorciao">Divorciado(a)</option>
-		<option value="viudo">Viudo(a)</option>
-		<option value="otro">Otro</option>
+		<option value="soltero" <?php if ($f['estadoCivil']=="soltero") {echo 'selected';}?>>Soltero(a)</option>
+		<option value="casado" <?php if ($f['estadoCivil']=="casado") {echo 'selected';}?>>Casado(a)</option>
+		<option value="divorciao" <?php if ($f['estadoCivil']=="divorciao") {echo 'selected';}?>>Divorciado(a)</option>
+		<option value="viudo" <?php if ($f['estadoCivil']=="viudo") {echo 'selected';}?>>Viudo(a)</option>
+		<option value="otro" <?php if ($f['estadoCivil']=="otro") {echo 'selected';}?>>Otro</option>
 	</select>
 </div><div class="input-group">
   <span class="input-group-text">No. de hijos*</span>
-  <input type="number" class="form-control" placeholder="N" name="nHijos" id="n2d" min="0">
+  <input type="number" class="form-control" placeholder="N" name="nHijos" id="n2d" min="0" value=<?php echo $f['nHijos']; ?>>
 </div>
 
 
 <div class="input-group">
   <span class="input-group-text">Domicilio actual</span>
-  <input type="text" class="form-control" placeholder="Domicilio actual"  required="true" name="domicilioActual" id="estudios">
+  <input type="text" class="form-control" placeholder="Domicilio actual"  required="true" name="domicilioActual" id="estudios" value=<?php echo $f['domicilioActual']; ?>>
 </div>
 
 <div class="input-group">
   <span class="input-group-text">Teléfono domicilio</span>
-  <input type="number" class="form-control" placeholder="Teléfono"  required="true" name="telefono" id="tel" min="0">
+  <input type="number" class="form-control" placeholder="Teléfono"  required="true" name="telefono" id="tel" min="0" value=<?php echo $f['telefono']; ?>>
 </div>
 
 <div class="input-group">
   <span class="input-group-text">Tipo de vivienda</span>
 	<select name="tipoVivienda" required>
 		<option selected disabled value="">-----</option>
-		<option value="casa">Casa</option>
-		<option value="departamento">Departamento</option>
+		<option value="casa" <?php if ($f['tipoVivienda']=="casa") {echo 'selected';}?>>Casa</option>
+		<option value="departamento" <?php if ($f['tipoVivienda']=="departamento") {echo 'selected';}?>>Departamento</option>
 	</select>
 </div>
 	
@@ -131,56 +143,56 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
   <span class="input-group-text">La casa o departamento donde vives es</span>
   <select name="viviendaEs" required>
 		<option selected disabled value="">-----</option>
-		<option value="propia">Propia</option>
-		<option value="rentada">Rentada</option>
-		<option value="prestada">Prestada</option>
-		<option value="otros">Otros</option>
+		<option value="propia" <?php if ($f['viviendaEs']=="propia") {echo 'selected';}?>>Propia</option>
+		<option value="rentada" <?php if ($f['viviendaEs']=="rentada") {echo 'selected';}?>>Rentada</option>
+		<option value="prestada" <?php if ($f['viviendaEs']=="prestada") {echo 'selected';}?>>Prestada</option>
+		<option value="otros" <?php if ($f['viviendaEs']=="otros") {echo 'selected';}?>>Otros</option>
 	</select>
 </div>			
 			
 <div class="input-group">
   <span class="input-group-text">No. de personas con las que vives</span>
-  <input type="number" class="form-control" placeholder="N"  required name="nPersonas" id="n2d" min="0">
+  <input type="number" class="form-control" placeholder="N"  required name="nPersonas" id="n2d" min="0" value=<?php echo $f['nPersonas']; ?>>
 </div>			
 
 <div class="input-group">
   <span class="input-group-text">Parentesco*:</span>
-  <input type="text" class="form-control" placeholder="Parentesco"  required name="parentesco" id="estudios">
+  <input type="text" class="form-control" placeholder="Parentesco"  required name="parentesco" id="estudios" value=<?php echo $f['parentesco']; ?>>
 </div>	
 
 <div class="input-group">
   <span class="input-group-text">En el transcurso de tus estudios viviras:</span>
   <select name="vivira" required>
 		<option selected disabled value="">----------</option>
-		<option value="con mi familia">Con mi familia</option>
-		<option value="con familiares cercanos">Con familiares cercanos</option>
-		<option value="con otros estudiantes">Con otros estudiantes</option>
-		<option value="solo">Solo</option>
+		<option value="con mi familia" <?php if ($f['vivira']=="con mi familia") {echo 'selected';}?>>Con mi familia</option>
+		<option value="con familiares cercanos" <?php if ($f['vivira']=="con familiares cercanos") {echo 'selected';}?>>Con familiares cercanos</option>
+		<option value="con otros estudiantes" <?php if ($f['vivira']=="con otros estudiantes") {echo 'selected';}?>>Con otros estudiantes</option>
+		<option value="solo" <?php if ($f['vivira']=="solo") {echo 'selected';}?>>Solo</option>
 	</select>
 </div>		
 
 <div class="input-group">
   <span class="input-group-text" id="ea"> A cuánto ascienden los ingresos mensuales de tu familia $*:</span>
-  <input type="number" class="form-control" placeholder="N"   name="ingresoMFamiliar" id="tel" min="0">
+  <input type="number" class="form-control" placeholder="N"   name="ingresoMFamiliar" id="tel" min="0" value=<?php echo $f['ingresoMfamiliar']; ?>>
 </div>	
 
 <div class="input-group">
   <span class="input-group-text" id="ea2">En caso de ser económicamente independiente, ¿a cuánto asciende tu ingreso? $*:</span>
-  <input type="number" class="form-control" placeholder="N"   name="tuIngreso" id="tel" min="0">
+  <input type="number" class="form-control" placeholder="N"   name="tuIngreso" id="tel" min="0" value=<?php echo $f['tuIngreso']; ?>>
 </div>	
 
 <h4>En caso de accidente avisar a:</h4>
 <div class="input-group">
   <span class="input-group-text">Nombre</span>
-  <input type="text" class="form-control" placeholder="Nombre completo"   name="avisarNombre" id="correoIn" required>
+  <input type="text" class="form-control" placeholder="Nombre completo"   name="avisarNombre" id="correoIn" required value=<?php echo $f['avisarNombre']; ?>>
 </div>
 <div class="input-group">
   <span class="input-group-text">Teléfono</span>
-  <input type="number" class="form-control" placeholder="Teléfono"   name="avisarTelefono" id="tel" min="0" required>
+  <input type="number" class="form-control" placeholder="Teléfono"   name="avisarTelefono" id="tel" min="0" required value=<?php echo $f['avisarTelefono']; ?>>
 </div>
 
 <?php 
-
+}
  ?>
 		<br>
 	<input type="submit" name="accion" value="Enviar" id="aceptar" class="btn btn-success"><br>
