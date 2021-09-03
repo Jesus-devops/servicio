@@ -4,14 +4,6 @@ include "../conexion.php";
 
 if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	
-$re=$mysql->query("select noControl from extra where noControl=".$_SESSION['noControl'])or die($mysql-> error);
-		$noC=0;	
-		while ($f=$re->fetch_array()) { 
-		$noC=$f['noControl'];			
-	  	} 
-
-
-}
 
 
 ?>
@@ -37,32 +29,27 @@ $re=$mysql->query("select noControl from extra where noControl=".$_SESSION['noCo
 
 <section>
 <form action="altaAlumno2.php" method = "post" enctype="multipart/form-data" id="agrega">
-	
+	<?php 
+	$re=$mysql->query("select * from beca where noControl != NULL and noControl=".$_SESSION['noControl'])or die($mysql-> error);
+		
+	 ?>
 	<br>
 		<div id="orden">
-
-<?php 
-if (isset($_SESSION['becado']) &&$_SESSION['becado']=='si') {
-	?>
 <div class="input-group">
 	<span class="input-group-text" >becado por</span>
 	<select name="institucion" required>
 		<option selected disabled value="">----------</option>
-		<option value="Gobierno federal">Gobierno federal</option>
-		<option value="Gobierno estatal">Gobierno estatal</option>
-		<option value="Esfuerzos de bachillerato">Esfuerzos de bachillerato</option>
+		<option value="Gobierno federal" <?php while ($f=$re->fetch_array()) {  if ($f['institucion']=="Gobierno federal") {echo 'selected';}}?> >Gobierno federal</option>
+		<option value="Gobierno estatal" <?php while ($f=$re->fetch_array()) {  if ($f['institucion']=="Gobierno estatal") {echo 'selected';}}?> >Gobierno estatal</option>
+		<option value="Esfuerzos de bachillerato" <?php while ($f=$re->fetch_array()) {  if ($f['institucion']=="Esfuerzos de bachillerato") {echo 'selected';}}?> >Esfuerzos de bachillerato</option>
 	</select>
 </div>			
 <?php  ?>
 <div class="input-group">
   <span class="input-group-text">Nombre de la institucion</span>
-  <input type="text" class="form-control" placeholder="Institucion" name="nombreInstitucion" id="estudios">
+  <input type="text" class="form-control" placeholder="Institucion" name="nombreInstitucion" id="estudios" value=<?php while ($f=$re->fetch_array()) { 	echo $f['Institucion'];	} ?>>
 </div>
 
-<?php 	
-}
-if (isset($_SESSION['trabaja']) &&$_SESSION['trabaja']=='si') {
-	?>
 <div class="input-group">
   <span class="input-group-text">Nombre de empresa donde trabajas</span>
   <input type="text" class="form-control" placeholder="Empresa" name="nombreEmpresa" id="txtlargo">
@@ -78,7 +65,6 @@ if (isset($_SESSION['trabaja']) &&$_SESSION['trabaja']=='si') {
 	</select>
 </div>
 
-<?php } ?>
 
 <span class="input-group-text">Donde realizaste tus estudios de:</span>
 <div class="input-group" style="display: block;">
@@ -192,6 +178,10 @@ if (isset($_SESSION['trabaja']) &&$_SESSION['trabaja']=='si') {
   <span class="input-group-text">Teléfono</span>
   <input type="number" class="form-control" placeholder="Teléfono"   name="avisarTelefono" id="tel" min="0" required>
 </div>
+
+<?php 
+
+ ?>
 		<br>
 	<input type="submit" name="accion" value="Enviar" id="aceptar" class="btn btn-success"><br>
 </form>
@@ -200,4 +190,7 @@ if (isset($_SESSION['trabaja']) &&$_SESSION['trabaja']=='si') {
 </div>
 </center>
 </body>
+<?php 
+}
+ ?>
 </html>
