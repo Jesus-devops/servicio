@@ -67,7 +67,9 @@ $re=$mysql->query("select * from alumno where noControl=".$_SESSION['noControl']
 		<option value="12" <?php  if ($f['semestre']==12) {echo 'selected';}?>>12</option>	
 		<option value="13" <?php  if ($f['semestre']==13) {echo 'selected';}?>>13</option>
 	</select>
+</div>
 
+<div class="input-group">
   <span class="input-group-text" style="margin-left: 15px;">Grupo</span>
 	<select name="grupo" required style="margin: 0px;"> 
 		<option selected disabled >-----</option>
@@ -108,8 +110,8 @@ $re=$mysql->query("select * from alumno where noControl=".$_SESSION['noControl']
 
 <div class="input-group">
   <span class="input-group-text">Nombre</span>
-  <input type="text" class="form-control" required="true" name="apellidoP"placeholder="Apellido Paterno" required id="txtcorto" value="<?php echo $f['apellidoP'] ?>">
-  <input type="text" class="form-control" required="true" name="apellidoM"placeholder="Apellido Materno" required id="txtcorto" value="<?php echo $f['apellidoM'] ?>">
+  <input type="text" class="form-control" required="true" name="apellidoP"placeholder="Apellido Paterno" required id="noC" value="<?php echo $f['apellidoP'] ?>">
+  <input type="text" class="form-control" required="true" name="apellidoM"placeholder="Apellido Materno" required id="noC" value="<?php echo $f['apellidoM'] ?>">
   <input type="text" class="form-control" required="true" name="nombres" placeholder="Nombres" required="true" id="txtmedio" value="<?php echo $f['nombres'] ?>">
 
 </div>
@@ -191,15 +193,20 @@ $re=$mysql->query("select * from alumno where noControl=".$_SESSION['noControl']
 <?php 
 	}
 $re2=$mysql->query("select * from celular where noControl=".$_SESSION['noControl'])or die($mysql-> error);
-		while ($g=$re2->fetch_array()) { 
+$c1=0;$c2=0;
+
+while ($g=$re2->fetch_array()) { $c1=$g['celular1']; $c2=$g['celular2'];}
+
 ?>
 <div class="input-group">
   <span class="input-group-text">Celular 1*</span>
-  <input type="number" class="form-control" placeholder="Celular 1" name="celular1" id="tel"value="<?php echo $g['celular1'] ?>">
-  <span class="input-group-text">Celular 2*</span>
-  <input type="number" class="form-control" placeholder="Celular 2" name="celular2" id="tel"value="<?php echo $g['celular2'] ?>">
+  <input type="number" class="form-control" placeholder="Celular 1" name="celular1" id="tel"value=<?php echo $c1; ?>>
+  <div class="input-group">
 </div>
-<?php } ?>
+  <span class="input-group-text">Celular 2*</span>
+  <input type="number" class="form-control" placeholder="Celular 2" name="celular2" id="tel"value=<?php echo $c2;  ?>>
+</div>
+<?php ?>
 
 </div>
 	

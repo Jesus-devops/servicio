@@ -61,9 +61,11 @@ CREATE TABLE `alumno` (
   `padre` varchar(8) NOT NULL,
   `madre` varchar(8) NOT NULL,
   `becado` varchar(2) NOT NULL,
-  `idAsesor` int(10) unsigned NOT NULL,
+  `idAsesor` int(10) NOT NULL,
   PRIMARY KEY (`noControl`),
-  UNIQUE KEY `noControl_UNIQUE` (`noControl`)
+  UNIQUE KEY `noControl_UNIQUE` (`noControl`),
+  KEY `fk_alumno_asesor1_idx` (`idAsesor`),
+  CONSTRAINT `fk_alumno_asesor1` FOREIGN KEY (`idAsesor`) REFERENCES `asesor` (`idAsesor`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `alumno` */
@@ -71,52 +73,38 @@ CREATE TABLE `alumno` (
 insert  into `alumno`(`noControl`,`foto`,`carrera`,`semestre`,`grupo`,`turno`,`apellidoP`,`apellidoM`,`nombres`,`fecha`,`sexo`,`edad`,`email`,`CP`,`escolaridad`,`nombreInstitucion`,`trabaja`,`padre`,`madre`,`becado`,`idAsesor`) values 
 (0,'','',0,'H','','','','','0000-00-00','',0,'',0,'','','','','','',0),
 (1,'1','sistemas',6,'H','','Kinney','Wiley','Constance','0000-00-00','H',22,'1',1,'1','1','si','vive','vive','no',0),
-(2,'1','mecatronica',13,'H','','Brown','Bender','Inez','0000-00-00','M',26,'1',1,'1','1','no','finado','finado','no',2),
-(3,'153683251_Volcanic Age Capitulo 182 (2).jpg','administracion',3,'A','','3','3','3','2021-08-24','H',31,'3@3',3,'Preparatoria','3','si','vive','vive','si',0),
 (4,'641286100_regreso del jugador congelado Capitulo 42 (1).jpg','administracion',4,'C','','4','4','4','2021-08-24','M',41,'1@1',4,'Preparatoria','4','no','finado','finado','no',0),
 (5,'474393127_regreso del jugador congelado Capitulo 42 (1).jpg','administracion',4,'C','','4','4','4','2021-08-24','M',41,'1@1',4,'Preparatoria','4','no','finado','finado','no',0),
 (6,'920690555_regreso del jugador congelado Capitulo 42 (1).jpg','administracion',4,'C','','4','4','4','2021-08-24','M',41,'1@1',4,'Preparatoria','4','no','finado','finado','no',0),
-(16640087,'87491030_3349ec94.jpg','bioquimica',1,'H','','1','1','1','2021-08-13','H',11,'1@1',1,'BachTecnico','1','si','vive','vive','si',0),
-(16640088,'846996943_3349ec94.jpg','administracion',1,'H','','1','1','1','2021-08-13','H',10,'1@1',1,'BachTecnico','1','no','vive','vive','si',0),
-(16640089,'600526229_3349ec94.jpg','bioquimica',1,'H','','1','1','1','2021-08-13','H',12,'1@1',1,'Preparatoria','1','si','vive','vive','si',0),
-(16640090,'306365695_3349ec94.jpg','bioquimica',2,'H','','1','1','1','2021-08-13','M',11,'1@1',1,'Preparatoria','1','si','vive','vive','si',0),
-(16640091,'674828592_3349ec94.jpg','bioquimica',2,'H','','1','1','1','2021-08-13','M',11,'1@1',1,'Preparatoria','1','si','vive','vive','si',0),
-(16640092,'967088578_3349ec94.jpg','bioquimica',2,'H','','1','1','1','2021-08-13','M',11,'1@1',1,'Preparatoria','1','si','vive','vive','si',0),
-(16640093,'67126863_3349ec94.jpg','bioquimica',2,'H','','1','1','1','2021-08-13','M',11,'1@1',1,'Preparatoria','1','si','vive','vive','si',0),
-(16640094,'424441469_3349ec94.jpg','bioquimica',2,'H','','1','1','1','2021-08-13','M',11,'1@1',1,'Preparatoria','1','si','vive','vive','si',0),
-(16640095,'796644145_3349ec94.jpg','administracion',1,'H','','1','1','1','2021-08-13','H',11,'1@1',1,'Preparatoria','1','si','VIVE','VIVE','si',0),
-(16640096,'962819915_3349ec94.jpg','administracion',1,'H','','1','1','1','2021-08-13','M',11,'1@1',1,'BachTecnico','1','si','VIVE','VIVE','si',0),
-(16640097,'664560753_3349ec94.jpg','administracion',2,'H','','1','1','1','2021-08-12','H',24,'1@1',1,'Preparatoria','1','no','VIVE','VIVE','si',0),
-(16640098,'682826757_3349ec94.jpg','bioquimica',2,'H','','gffggfh','gfhdfghdfg','fdg','2021-08-11','H',32,'jesus-c-97@outlook.com',54255,'Preparatoria','dfgfg','si','VIVE','VIVE','si',0),
-(16640099,'787999918_3349ec94.jpg','bioquimica',2,'H','','gffggfh','gfhdfghdfg','fdg','2021-08-11','H',32,'jesus-c-97@outlook.com',54255,'Preparatoria','dfgfg','si','VIVE','VIVE','si',0),
-(16640100,'1','industrial',9,'H Bis','','Bravo','Garcia','Jesus','0000-00-00','H',24,'1',1,'1','1','si','vive','finado','si',0),
-(16640101,'1','gestion',9,'H Bis','','Atkins','Berger','Belle','0000-00-00','M',28,'1',1,'1','1','no','vive','vive','no',0),
+(7,'244580320_1c71051c.jpg','gestion',1,'F','Bis','1','1','2','2021-08-25','H',10,'1@1',1,'Preparatoria','1','si','vive','vive','si',0),
+(515,'335041463_FB_IMG_1630338495451.jpg','industrial',4,'G','Bis','Ueudud','Jjdjd','Jwhhe','2021-09-02','H',66,'jesus-c-97@outlook.com',9496,'Preparatoria','Jsjs','si','vive','vive','si',0),
+(516,'887031137_FB_IMG_1630338495451.jpg','industrial',4,'G','Bis','Ueudud','Jjdjd','Jwhhe','2021-09-02','H',66,'jesus-c-97@outlook.com',9496,'Preparatoria','Jsjs','si','vive','vive','si',0),
+(16640100,'1','tics',11,'H','','Bravo','Garcia','Jesus salvador','0000-00-00','H',24,'1@1',1,'Preparatoria','1','si','vive','finado','si',2),
+(16640101,'1','gestion',11,'H','Bis','Atkins','Berger','Belle','0000-00-00','M',28,'1',1,'1','1','no','vive','vive','no',2),
 (16640102,'1','sistemas',12,'D','','Hinton','Shepard','Logan','0000-00-00','H',25,'1',1,'1','1','si','vive','vive','no',0),
 (16640103,'1','sistemas',13,'E','','Long','Michael','Gregory','0000-00-00','M',26,'1',1,'1','1','si','vive','vive','si',0),
 (16640104,'1','sistemas',8,'F','','Delgado','Walls','Lara','0000-00-00','H',21,'1',1,'1','1','no','vive','vive','no',0),
 (16640105,'1','sistemas',9,'G','','Campbell','Wilkerson','Bo','0000-00-00','M',22,'1',1,'1','1','si','vive','vive','no',0),
-(16640106,'1','sistemas',9,'H Bis','','Merritt','Wooten','Clio','0000-00-00','H',23,'1',1,'1','1','no','vive','vive','si',0),
-(16640107,'1','sistemas',9,'H Bis','','Stanley','Schneider','Kareem','0000-00-00','M',25,'1',1,'1','1','si','vive','vive','no',0),
-(16640108,'1','sistemas',9,'H Bis','','Trevino','Cooley','Adrian','0000-00-00','H',22,'1',1,'1','1','si','vive','vive','no',0),
+(16640106,'1','sistemas',11,'H','Bis','Merritt','Wooten','Clio','0000-00-00','H',23,'1',1,'1','1','no','vive','vive','si',2),
+(16640107,'1','sistemas',11,'H','Bis','Stanley','Schneider','Kareem','0000-00-00','M',25,'1',1,'1','1','si','vive','vive','no',2),
+(16640108,'1','sistemas',9,'H','Bis','Trevino','Cooley','Adrian','0000-00-00','H',22,'1',1,'1','1','si','vive','vive','no',0),
 (16640109,'1','sistemas',13,'D','','Roth','Mason','Tyrone','0000-00-00','M',26,'1',1,'1','1','no','vive','vive','si',0),
 (16640110,'1','sistemas',8,'E','','Ryan','Harding','Meghan','0000-00-00','H',24,'1',1,'1','1','si','vive','vive','no',0),
 (16640111,'1','sistemas',9,'F','','Dillon','Lowery','Willa','0000-00-00','M',28,'1',1,'1','1','no','vive','finado','no',0),
 (16640112,'1','sistemas',10,'G','','Tanner','Mathews','Sophia','0000-00-00','H',25,'1',1,'1','1','si','vive','finado','no',0),
-(16640113,'1','sistemas',9,'H Bis','','Bryant','Rivera','Ainsley','0000-00-00','M',26,'1',1,'1','1','si','finado','vive','no',0),
-(16640114,'1','sistemas',9,'H Bis','','Thompson','Contreras','Walker','0000-00-00','H',21,'1',1,'1','1','no','vive','vive','si',0),
-(16640115,'1','sistemas',9,'H Bis','','Marquez','Mullen','Diana','0000-00-00','M',22,'1',1,'1','1','si','vive','vive','no',0),
+(16640113,'1','sistemas',9,'H','Bis','Bryant','Rivera','Ainsley','0000-00-00','M',26,'1',1,'1','1','si','finado','vive','no',0),
+(16640114,'1','sistemas',9,'H','Bis','Thompson','Contreras','Walker','0000-00-00','H',21,'1',1,'1','1','no','vive','vive','si',0),
+(16640115,'1','sistemas',9,'H','Bis','Marquez','Mullen','Diana','0000-00-00','M',22,'1',1,'1','1','si','vive','vive','no',0),
 (16640116,'1','sistemas',8,'D','','Kaufman','Hawkins','Alexander','0000-00-00','H',23,'1',1,'1','1','no','vive','vive','no',0),
 (16640117,'1','sistemas',9,'E','','Bullock','Hammond','Sebastian','0000-00-00','M',25,'1',1,'1','1','si','vive','vive','si',0),
 (16640118,'1','1',10,'F','','Hensley','York','Hedda','0000-00-00','H',22,'1',1,'1','1','si','vive','vive','no',0),
-(16640119,'1','1',9,'H Bis','','Ballard','Sullivan','Jacob','0000-00-00','M',26,'1',1,'1','1','no','vive','vive','no',0),
-(16640120,'1','gestion',9,'H Bis','','Bradley','Merrill','Mikayla','0000-00-00','H',24,'1',1,'1','1','si','vive','vive','si',0),
-(16640121,'1','gestion',9,'H Bis','','Petersen','Ramirez','Maisie','0000-00-00','M',28,'1',1,'1','1','no','vive','vive','no',0),
+(16640119,'1','1',9,'H','Bis','Ballard','Sullivan','Jacob','0000-00-00','M',26,'1',1,'1','1','no','vive','vive','no',0),
 (16640122,'1','gestion',8,'D','','Rocha','Bradshaw','Michelle','0000-00-00','H',25,'1',1,'1','1','si','vive','vive','no',0),
 (16640123,'1','gestion',9,'E','','Cook','Delgado','Joshua','0000-00-00','M',26,'1',1,'1','1','si','vive','finado','si',0),
 (16640124,'1','gestion',10,'F','','Suarez','Rich','Ali','0000-00-00','H',21,'1',1,'1','1','no','vive','finado','no',0),
 (16640125,'1','gestion',11,'G','','Ochoa','Wilder','Tate','0000-00-00','M',22,'1',1,'1','1','si','vive','vive','no',0),
-(16640126,'1','gestion',9,'H Bis','','Johns','Cummings','Mark','0000-00-00','H',23,'1',1,'1','1','no','vive','vive','no',0),
-(16640127,'1','gestion',9,'H Bis','','Flynn','Battle','Garrison','0000-00-00','M',25,'1',1,'1','1','si','finado','vive','no',0),
+(16640126,'1','gestion',9,'H','Bis','Johns','Cummings','Mark','0000-00-00','H',23,'1',1,'1','1','no','vive','vive','no',0),
+(16640127,'1','gestion',9,'H','Bis','Flynn','Battle','Garrison','0000-00-00','M',25,'1',1,'1','1','si','finado','vive','no',0),
 (16640128,'1','gestion',8,'H','','Harper','Cooper','Amanda','0000-00-00','H',22,'1',1,'1','1','si','vive','vive','si',0),
 (16640129,'1','gestion',9,'D','','Caldwell','Singleton','Giselle','0000-00-00','M',26,'1',1,'1','1','no','vive','vive','no',0),
 (16640130,'1','gestion',10,'E','','Charles','Velasquez','Hammett','0000-00-00','H',24,'1',1,'1','1','si','vive','vive','no',0),
@@ -124,13 +112,13 @@ insert  into `alumno`(`noControl`,`foto`,`carrera`,`semestre`,`grupo`,`turno`,`a
 (16640132,'1','gestion',12,'G','','Gilmore','Gonzales','Drake','0000-00-00','H',25,'1',1,'1','1','si','vive','vive','no',0),
 (16640133,'1','gestion',13,'H','','Sparks','Cardenas','William','0000-00-00','M',26,'1',1,'1','1','si','vive','vive','no',0),
 (16640134,'1','gestion',8,'H','','Richmond','Hart','Zenaida','0000-00-00','H',21,'1',1,'1','1','no','vive','vive','si',0),
-(16640135,'1','gestion',9,'H Bis','','Gross','Battle','Kelly','0000-00-00','M',22,'1',1,'1','1','si','vive','finado','no',0),
+(16640135,'1','gestion',9,'H','','Gross','Battle','Kelly','0000-00-00','M',22,'1',1,'1','1','si','vive','finado','no',0),
 (16640136,'1','gestion',13,'H','','Rocha','Maddox','Kyle','0000-00-00','H',23,'1',1,'1','1','no','vive','finado','no',2),
 (16640137,'1','gestion',11,'H','','Schroeder','Byers','Cameran','0000-00-00','M',25,'1',1,'1','1','si','vive','vive','si',0),
 (16640138,'1','gestion',12,'H','','Thornton','Johnson','Igor','0000-00-00','H',22,'1',1,'1','1','si','vive','vive','no',0),
 (16640139,'1','gestion',13,'H','','Ross','Alford','Yoko','0000-00-00','M',26,'1',1,'1','1','no','vive','vive','no',0),
 (16640140,'1','gestion',8,'H','','Jennings','Kent','Florence','0000-00-00','H',24,'1',1,'1','1','si','vive','vive','no',0),
-(16640141,'1','gestion',9,'H Bis','','Curtis','Barton','Hollee','0000-00-00','M',28,'1',1,'1','1','no','finado','vive','no',0),
+(16640141,'1','gestion',9,'H','','Curtis','Barton','Hollee','0000-00-00','M',28,'1',1,'1','1','no','finado','vive','no',0),
 (16640142,'1','gestion',13,'H','','Mcpherson','Clark','Carson','0000-00-00','H',25,'1',1,'1','1','si','vive','vive','si',2),
 (16640143,'1','gestion',11,'B','','Nash','Schwartz','Hector','0000-00-00','M',26,'1',1,'1','1','si','vive','vive','no',0),
 (16640144,'1','gestion',12,'B','','Fuller','Odonnell','Ciara','0000-00-00','H',21,'1',1,'1','1','no','vive','vive','no',0),
@@ -154,7 +142,7 @@ insert  into `alumno`(`noControl`,`foto`,`carrera`,`semestre`,`grupo`,`turno`,`a
 (16640162,'1','1',12,'H','','Ware','Richards','Pearl','0000-00-00','H',25,'1',1,'1','1','si','vive','vive','si',0),
 (16640163,'1','1',13,'H','','Gilbert','Schmidt','Guy','0000-00-00','M',26,'1',1,'1','1','si','vive','vive','no',0),
 (16640164,'1','1',8,'H','','Stafford','Stephens','Talon','0000-00-00','H',21,'1',1,'1','1','no','vive','vive','no',0),
-(16640165,'1','1',9,'H Bis','','Estes','Winters','Bert','0000-00-00','M',22,'1',1,'1','1','si','vive','vive','si',0),
+(16640165,'1','1',9,'H','','Estes','Winters','Bert','0000-00-00','M',22,'1',1,'1','1','si','vive','vive','si',0),
 (16640166,'1','1',13,'H','','Britt','Salazar','Raja','0000-00-00','H',23,'1',1,'1','1','no','vive','vive','no',2),
 (16640167,'1','1',11,'H','','Hendricks','Pitts','Emerald','0000-00-00','M',25,'1',1,'1','1','si','vive','vive','no',0),
 (16640168,'1','1',12,'H','','Riley','Pace','Hedley','0000-00-00','H',22,'1',1,'1','1','si','vive','vive','no',0),
@@ -202,7 +190,7 @@ insert  into `alumno`(`noControl`,`foto`,`carrera`,`semestre`,`grupo`,`turno`,`a
 (16640210,'1','1',12,'H','','Ryan','Harding','Meghan','0000-00-00','H',24,'1',1,'1','1','si','vive','vive','no',0),
 (16640211,'1','1',13,'H','','Dillon','Lowery','Willa','0000-00-00','M',28,'1',1,'1','1','no','finado','vive','no',0),
 (16640212,'1','1',8,'H','','Tanner','Mathews','Sophia','0000-00-00','H',25,'1',1,'1','1','si','vive','vive','si',0),
-(16640213,'1','1',9,'H Bis','','Bryant','Rivera','Ainsley','0000-00-00','M',26,'1',1,'1','1','si','vive','vive','no',0),
+(16640213,'1','1',9,'H','','Bryant','Rivera','Ainsley','0000-00-00','M',26,'1',1,'1','1','si','vive','vive','no',0),
 (16640214,'1','1',13,'H','','Thompson','Contreras','Walker','0000-00-00','H',21,'1',1,'1','1','no','vive','vive','no',2),
 (16640215,'1','1',11,'H','','Marquez','Mullen','Diana','0000-00-00','M',22,'1',1,'1','1','si','vive','vive','si',0),
 (16640216,'1','1',12,'H','','Kaufman','Hawkins','Alexander','0000-00-00','H',23,'1',1,'1','1','no','vive','vive','no',0),
@@ -245,7 +233,7 @@ insert  into `alumno`(`noControl`,`foto`,`carrera`,`semestre`,`grupo`,`turno`,`a
 (17640033,'1','1',12,'G','','Gilmore','Gonzales','Drake','0000-00-00','H',25,'1',1,'1','1','si','vive','vive','no',0),
 (17640034,'1','1',13,'H','','Sparks','Cardenas','William','0000-00-00','M',26,'1',1,'1','1','si','vive','vive','no',0),
 (17640035,'1','1',8,'H','','Richmond','Hart','Zenaida','0000-00-00','H',21,'1',1,'1','1','no','vive','vive','si',0),
-(17640036,'1','1',9,'H Bis','','Gross','Battle','Kelly','0000-00-00','M',22,'1',1,'1','1','si','vive','finado','no',0),
+(17640036,'1','1',9,'H','','Gross','Battle','Kelly','0000-00-00','M',22,'1',1,'1','1','si','vive','finado','no',0),
 (17640037,'1','1',13,'H','','Rocha','Maddox','Kyle','0000-00-00','H',23,'1',1,'1','1','no','vive','finado','no',2),
 (17640038,'1','1',11,'H','','Schroeder','Byers','Cameran','0000-00-00','M',25,'1',1,'1','1','si','vive','vive','si',0),
 (17640039,'1','1',12,'H','','Thornton','Johnson','Igor','0000-00-00','H',22,'1',1,'1','1','si','vive','vive','no',0),
@@ -275,7 +263,7 @@ insert  into `alumno`(`noControl`,`foto`,`carrera`,`semestre`,`grupo`,`turno`,`a
 (17640063,'1','1',12,'H','','Ware','Richards','Pearl','0000-00-00','H',25,'1',1,'1','1','si','vive','vive','si',0),
 (17640064,'1','1',13,'H','','Gilbert','Schmidt','Guy','0000-00-00','M',26,'1',1,'1','1','si','vive','vive','no',0),
 (17640065,'1','1',8,'H','','Stafford','Stephens','Talon','0000-00-00','H',21,'1',1,'1','1','no','vive','vive','no',0),
-(17640066,'1','1',9,'H Bis','','Estes','Winters','Bert','0000-00-00','M',22,'1',1,'1','1','si','vive','vive','si',0),
+(17640066,'1','1',9,'H','','Estes','Winters','Bert','0000-00-00','M',22,'1',1,'1','1','si','vive','vive','si',0),
 (17640067,'1','1',10,'H','','Britt','Salazar','Raja','0000-00-00','H',23,'1',1,'1','1','no','vive','vive','no',0),
 (17640068,'1','1',11,'H','','Hendricks','Pitts','Emerald','0000-00-00','M',25,'1',1,'1','1','si','vive','vive','no',0),
 (17640069,'1','1',12,'H','','Riley','Pace','Hedley','0000-00-00','H',22,'1',1,'1','1','si','vive','vive','no',0),
@@ -1078,32 +1066,18 @@ CREATE TABLE `anexoe` (
 /*Data for the table `anexoe` */
 
 insert  into `anexoe`(`noControl`,`creditosAcumulados`,`servicioSocial`,`residenciasPro`,`titulacion`,`adeudaMaterias`,`C`,`CIT`,`PDS`,`PD`,`AE`,`CCB`,`FE`,`tOtrosC`,`n1`,`n2`,`n3`,`n4`,`n5`,`n6`,`n7`,`n8`,`n9`,`n10`,`tIngles`) values 
-(1,1,'si','si','TP','no',1.0,0.5,0.0,0.5,1.0,1.0,0.5,4.5,0,1,1,1,1,1,1,1,0,0,7),
-(2,192,'si','no','O','no',1.0,1.0,1.0,1.0,1.0,1.0,0.5,6.5,0,1,1,0,1,0,0,1,1,0,5),
-(16640096,1,'si','si','TP','no',0.0,1.0,1.0,1.0,1.0,0.0,0.0,4.0,0,0,0,0,0,0,0,0,0,0,0),
-(16640097,1,'si','si','TP','no',0.0,1.0,1.0,1.0,1.0,0.0,0.0,4.0,0,0,0,0,0,0,0,0,0,0,0),
-(16640100,190,'si','si','TP','si',0.0,0.5,0.0,0.5,1.5,1.5,0.0,4.0,0,0,0,0,0,1,1,1,1,1,5),
-(16640101,188,'si','si','TP','si',1.0,0.0,1.0,0.0,0.0,0.0,0.0,2.0,0,1,1,0,1,1,0,0,1,1,6),
 (16640102,159,'si','si','---','no',1.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0,0,0,0,1,0,1,0,0,1,0,3),
 (16640103,180,'no','no','---','no',0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1,1,1,1,1,1,1,1,1,1,10),
 (16640104,170,'si','si','TPR','no',0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0,0,0,0,0,0,0),
 (16640105,186,'si','si','---','no',1.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0,1,1,1,1,1,1,1,1,1,1,10),
-(16640106,198,'no','si','TPR','no',0.0,0.0,1.0,0.0,1.0,0.0,1.0,3.0,1,1,1,1,1,1,1,1,1,1,10),
 (16640107,168,'si','no','---','no',0.0,1.0,1.0,0.0,0.0,1.0,1.0,4.0,1,0,1,0,0,1,0,1,0,1,5),
-(16640108,198,'si','no','TPR','si',1.0,0.0,1.0,0.0,0.0,0.0,0.0,2.0,0,1,1,0,1,1,0,0,1,1,6),
 (16640109,135,'no','no','---','si',1.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0,0,0,0,1,0,1,0,0,1,0,3),
 (16640110,189,'si','si','TPR','si',0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1,1,1,1,1,1,1,1,1,1,10),
 (16640111,198,'si','si','TPR','si',0.0,0.0,1.0,0.0,1.0,0.0,1.0,3.0,0,0,0,0,0,0,0,0,0,0,0),
 (16640112,178,'si','no','TPR','no',0.0,1.0,1.0,0.0,0.0,1.0,1.0,4.0,0,0,0,0,0,0,0,0,0,0,0),
-(16640113,198,'no','no','TPR','no',1.0,0.0,1.0,0.0,0.0,0.0,0.0,2.0,1,1,1,1,1,1,1,1,1,1,10),
-(16640114,189,'no','si','---','no',1.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0,1,0,1,0,0,1,0,1,0,1,5),
-(16640115,189,'no','si','---','si',0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,1,1,0,1,1,0,0,1,1,6),
 (16640116,19,'si','no','---','si',0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,1,0,1,0,0,1,0,3),
 (16640117,189,'si','no','---','no',1.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0,1,1,1,1,1,1,1,1,1,1,10),
 (16640118,188,'si','si','---','no',0.0,0.0,1.0,0.0,1.0,0.0,1.0,3.0,0,0,0,0,0,0,0,0,0,0,0),
-(16640119,199,'no','si','---','no',0.0,1.0,1.0,0.0,0.0,1.0,1.0,4.0,0,0,0,0,0,0,0,0,0,0,0),
-(16640120,188,'si','si','---','no',1.0,0.0,1.0,0.0,0.0,0.0,0.0,2.0,1,1,1,1,1,1,1,1,1,1,10),
-(16640121,199,'no','no','---','no',1.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0,1,0,1,0,0,1,0,1,0,1,5),
 (16640122,200,'no','no','TPR','no',0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,1,1,0,1,1,0,0,1,1,6),
 (16640123,204,'si','si','---','si',0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,1,0,1,0,0,1,0,3),
 (16640124,208,'si','si','---','no',1.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0,1,1,1,1,1,1,1,1,1,1,10),
@@ -2067,9 +2041,6 @@ CREATE TABLE `areafamiliarysocial` (
 
 /*Data for the table `areafamiliarysocial` */
 
-insert  into `areafamiliarysocial`(`relacionFamilia`,`dificultades`,`tipoDificultad`,`actitudFamilia`,`relacionP`,`actitudP`,`relacionM`,`actitudM`,`ligadoAfectivamente`,`ligadoPorque`,`tuEducacion`,`decision`,`otroDato`,`companerosR`,`companerosPorque`,`amigosR`,`tienePareja`,`parejaR`,`profesoresR`,`autoridadesR`,`tiempoLibre`,`actividades`,`noControl`) values 
-('buena','si','3','3','regular','3','buena','3','padre','3','3','3','3','buena','3','regular','si','regular','buena','buena','3','3',3);
-
 /*Table structure for table `asesor` */
 
 DROP TABLE IF EXISTS `asesor`;
@@ -2086,7 +2057,7 @@ CREATE TABLE `asesor` (
 /*Data for the table `asesor` */
 
 insert  into `asesor`(`idAsesor`,`nombre`,`correo`,`pass`,`nivel`) values 
-(0,'defualt','defualt','defualt',2),
+(0,'default','default','default',0),
 (1,'maria','1@1','123',1),
 (2,'jesus','2@2','123',2),
 (3,'6','4@4','123',2),
@@ -2107,7 +2078,7 @@ CREATE TABLE `beca` (
 /*Data for the table `beca` */
 
 insert  into `beca`(`Institucion`,`nombreInstitucion`,`noControl`) values 
-('Esfuerzos de bachillerato','3',3);
+('Gobierno federal','Jsjs',516);
 
 /*Table structure for table `caracteristicaspersonales` */
 
@@ -2149,9 +2120,6 @@ CREATE TABLE `caracteristicaspersonales` (
 
 /*Data for the table `caracteristicaspersonales` */
 
-insert  into `caracteristicaspersonales`(`idCP`,`puntual`,`timido`,`alegre`,`agresivo`,`abiertoIdeas`,`reflexivo`,`constante`,`optimista`,`impulsivo`,`silencioso`,`generoso`,`inquieto`,`humor`,`dominante`,`egoista`,`sumiso`,`confiado`,`imaginativo`,`iniciativa`,`sociable`,`responsable`,`perseverante`,`motivado`,`activo`,`independiente`,`noControl`) values 
-(3,'mucho','mucho','mucho','mucho','mucho','mucho','mucho','mucho','mucho','mucho','mucho','mucho','mucho','mucho','mucho','mucho','mucho','mucho','mucho','mucho','mucho','mucho','mucho','mucho','mucho',3);
-
 /*Table structure for table `celular` */
 
 DROP TABLE IF EXISTS `celular`;
@@ -2168,35 +2136,14 @@ CREATE TABLE `celular` (
 /*Data for the table `celular` */
 
 insert  into `celular`(`celular1`,`celular2`,`noControl`) values 
-(3,3,3),
 (4,4,4),
 (4,4,5),
 (4,4,6),
-(3524567890,3524568370,17640067),
-(3524567900,3524568360,17640163),
-(3524567910,3524568350,17640188),
-(3524567920,3524568340,17640278),
-(3524567930,3524568330,18640024),
-(3524567940,3524568320,18640072),
-(3524567950,3524568310,18640114),
-(3524567960,3524568300,18640120),
-(3524567970,3524568290,18640145),
-(3524567980,3524568280,18640193),
-(3524567990,3524568270,18640235),
-(3524568000,3524568260,18640236),
-(3524568010,3524568250,19640005),
-(3524568020,3524568240,19640053),
-(3524568030,3524568230,19640059),
-(3524568040,3524568220,19640067),
-(3524568050,3524568210,19640102),
-(3524568060,3524568200,19640103),
-(3524568070,3524568190,19640174),
-(3524568080,3524568180,19640175),
-(3524568090,3524568170,19640181),
-(3524568100,3524568160,19640188),
-(3524568110,3524568150,19640218),
-(3524568120,3524568140,19640223),
-(3524568130,3524568130,19640247);
+(4,1,7),
+(9464,6464,515),
+(9464,6464,516),
+(1,2,16640100),
+(1,2,16640101);
 
 /*Table structure for table `estadopsicofisiologico` */
 
@@ -2224,9 +2171,6 @@ CREATE TABLE `estadopsicofisiologico` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `estadopsicofisiologico` */
-
-insert  into `estadopsicofisiologico`(`tienePrescripcion`,`cualPrescripcion`,`manosPiesHinchados`,`dolorVientre`,`dolorCabezaVomito`,`perdidaEquilibrio`,`fatigaAgotamiento`,`perdidaVistaOido`,`DificilDormir`,`pesadillasTerrorNocturnoA`,`incontinencia`,`tartamudeo`,`miedoIntensoA`,`observacionesHigiene`,`noControl`) values 
-('no','','nunca','nunca','nunca','nunca','nunca','nunca','nunca','nunca','nunca','nunca','nunca','1',3);
 
 /*Table structure for table `extra` */
 
@@ -2263,7 +2207,7 @@ CREATE TABLE `extra` (
 /*Data for the table `extra` */
 
 insert  into `extra`(`primaria`,`secundaria`,`prepa`,`estudiosSuperiores`,`fechaDeNacimiento`,`lugarDeNacimiento`,`peso`,`estatura`,`estadoCivil`,`nHijos`,`domicilioActual`,`telefono`,`tipoVivienda`,`viviendaEs`,`nPersonas`,`parentesco`,`vivira`,`ingresoMfamiliar`,`tuIngreso`,`avisarNombre`,`avisarTelefono`,`noControl`) values 
-('3','3','3','3','2021-08-03','3',3,3,'soltero',3,'3',3,'casa','propia',3,'3','con mi familia',3,3,'3',3,3);
+('Viv','Jdjd','Njd','H','2021-09-11','Jjdjd',255,255,'casado',255,'Hsh',646,'departamento','prestada',255,'Hhd','con familiares cercanos',6464,664,'Hhd',6464,516);
 
 /*Table structure for table `hermanos` */
 
@@ -2282,9 +2226,6 @@ CREATE TABLE `hermanos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `hermanos` */
-
-insert  into `hermanos`(`nombre`,`fechaNacimiento`,`sexo`,`estudios`,`comoRelacion`,`actitudCon`,`noControl`) values 
-('3','2021-08-19','H','preparatoria','regular','3',3);
 
 /*Table structure for table `madre` */
 
@@ -2306,9 +2247,6 @@ CREATE TABLE `madre` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `madre` */
-
-insert  into `madre`(`nombreM`,`edadM`,`maxEscolaridadM`,`trabajaM`,`profesionM`,`lugarDeTrabajoM`,`tipoTrabajoM`,`domicilioM`,`telefonoM`,`noControl`) values 
-('3',3,'secundaria','no','','','','3',3,3);
 
 /*Table structure for table `observaciones` */
 
@@ -2347,9 +2285,6 @@ CREATE TABLE `observaciones` (
 
 /*Data for the table `observaciones` */
 
-insert  into `observaciones`(`idCP`,`puntualO`,`timidoO`,`alegreO`,`agresivoO`,`abiertoIdeasO`,`reflexivoO`,`constanteO`,`optimistaO`,`impulsivoO`,`silenciosoO`,`generosoO`,`inquietoO`,`humorO`,`dominanteO`,`egoistaO`,`sumisoO`,`confiadoO`,`imaginativoO`,`iniciativaO`,`sociableO`,`responsableO`,`perseveranteO`,`motivadoO`,`activoO`,`independienteO`) values 
-(3,'1','','','','','','','','','','','','','','','','','','','','','','','','');
-
 /*Table structure for table `padre` */
 
 DROP TABLE IF EXISTS `padre`;
@@ -2371,9 +2306,6 @@ CREATE TABLE `padre` (
 
 /*Data for the table `padre` */
 
-insert  into `padre`(`nombreP`,`edadP`,`maxEscolaridadP`,`trabajaP`,`profesionP`,`lugarDeTrabajoP`,`tipoTrabajoP`,`domicilioP`,`telefonoP`,`noControl`) values 
-('3',3,'primaria','no','','','','3',3,3);
-
 /*Table structure for table `periodo` */
 
 DROP TABLE IF EXISTS `periodo`;
@@ -2382,8 +2314,11 @@ CREATE TABLE `periodo` (
   `idPeriodo` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `periodo` varchar(45) NOT NULL,
   `año` year(4) NOT NULL,
-  PRIMARY KEY (`idPeriodo`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+  `alumno_noControl` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`idPeriodo`),
+  KEY `fk_periodo_alumno1_idx` (`alumno_noControl`),
+  CONSTRAINT `fk_periodo_alumno1` FOREIGN KEY (`alumno_noControl`) REFERENCES `alumno` (`noControl`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `periodo` */
 
@@ -2429,9 +2364,6 @@ CREATE TABLE `psicopedagogica` (
 
 /*Data for the table `psicopedagogica` */
 
-insert  into `psicopedagogica`(`idPP`,`ser`,`ayudaTareas`,`problemasPersonales`,`rendimientoEscolar`,`asignaturasTienes`,`favorita`,`fPor`,`sobresales`,`sPor`,`desagrada`,`dPor`,`materiaBaja`,`bPor`,`vienesTec`,`motivaVenir`,`promedioAnterior`,`reprobadas`,`inmediatos`,`metasVida`,`nombre del entrevistador`,`yoSoy`,`caracterEs`,`meGusta`,`aspiroVida`,`miedoDe`,`piensoLograr`,`noControl`) values 
-(3,'3','si','3','3','3','3','3','3','3','3','3','3','3','3','3',3,'si','3','3',NULL,'3','3','3','3','3','3',3);
-
 /*Table structure for table `reprobadas` */
 
 DROP TABLE IF EXISTS `reprobadas`;
@@ -2444,11 +2376,6 @@ CREATE TABLE `reprobadas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `reprobadas` */
-
-insert  into `reprobadas`(`noControl`,`nombre`) values 
-(3,'3'),
-(3,'3'),
-(3,'3');
 
 /*Table structure for table `trabajo` */
 
@@ -2465,7 +2392,7 @@ CREATE TABLE `trabajo` (
 /*Data for the table `trabajo` */
 
 insert  into `trabajo`(`nombreEmpresa`,`horario`,`noControl`) values 
-('3','matutino',3);
+('casa verde, barandal blanco','matutino',516);
 
 /* Trigger structure for table `periodo` */
 
