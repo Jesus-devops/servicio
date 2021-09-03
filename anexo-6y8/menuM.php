@@ -39,7 +39,7 @@ include "../conexion.php";
    	 	<a class="nav-link" href="Mfamilia.php" id="menuIndex">Familia</a>
   	</li>
   	<li class="nav-item">
-   	 	<a class="nav-link" href="Mareafamiliar.php" id="menuIndex">Area Familiar</a>
+   	 	<a class="nav-link" href="Mareafamiliar.php" id="menuIndex">Area Familiar y social</a>
   	</li>
  	<li class="nav-item">
  		<a class="nav-link" href="Mpsicopedagogica.php" id="menuIndex">Area Psicopedagogica</a>
