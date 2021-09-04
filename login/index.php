@@ -12,6 +12,11 @@
 <body id="log">
 	<center>
 		<a href="../anexo-E/"><img src="../logo.png" id="logo" style="margin-top: 20px;"></a>
+<ul class="nav nav" style="margin: 5px; display: block;">
+  	<li class="nav-item">
+   	 	<a class="btn btn-primary" href="../index.php" >Página principal</a>
+  	</li>
+</ul>			
 <br><br>
 	<section>
 

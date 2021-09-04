@@ -70,7 +70,7 @@ $re=$mysql->query("select noControl from areafamiliarysocial where noControl=".$
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">¿De qué tipo?*</span>
+  <span class="input-group-text">¿De qué tipo?</span>
   <input type="text" class="form-control" placeholder="Tipo"  name="tipoDificultad" id="txtmedio">
 </div>
 
@@ -276,7 +276,7 @@ else if ($_SESSION['padre']=='vive'&&$_SESSION['madre']=='vive'&&$_SESSION['nHer
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">¿Cómo es tu relación con tu pareja?*</span>
+  <span class="input-group-text">¿Cómo es tu relación con tu pareja?</span>
   <select name="parejaR">
 		<option selected disabled value="">-----</option>
 		<option value="buena">Buena</option>

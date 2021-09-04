@@ -33,6 +33,12 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	<center>
 <div id="contenedor">
 <header><img src="../logo.png" id="logo"></header>
+<ul class="nav nav" style="margin: 5px; display: block;">
+  	<li class="nav-item">
+   	 	<a class="btn btn-primary" href="../index.php" >Página principal</a>
+		<a class="btn btn-primary" href="MenuM.php" >Menú editar alumno</a>
+  	</li>
+</ul>	
 <div class="progress">
   <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
 </div>	

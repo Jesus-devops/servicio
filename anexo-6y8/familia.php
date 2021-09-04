@@ -101,15 +101,15 @@ if ($_SESSION['padre']=='vive') {
 	</select>
 </div>	
 <div class="input-group">
-  <span class="input-group-text">Profesión*</span>
+  <span class="input-group-text">Profesión</span>
   <input type="text" class="form-control"  name="profesionP" placeholder="Profesión" id="estudios">
 </div>	
 <div class="input-group">
-  <span class="input-group-text">Tipo de trabajo*</span>
+  <span class="input-group-text">Tipo de trabajo</span>
   <input type="text" class="form-control"  name="tipoTrabajoP" placeholder="Tipo" id="estudios">
 </div>	
 <div class="input-group">
-  <span class="input-group-text" > Nombre del lugar de trabajo*</span>
+  <span class="input-group-text" > Nombre del lugar de trabajo</span>
   <input type="text" class="form-control"  name="lugarDeTrabajoP" placeholder="lugar de trabajo" id="estudios">
 </div>	
 <div class="input-group">
@@ -155,15 +155,15 @@ if ($_SESSION['madre']=='vive') {
 	</select>
 </div>	
 <div class="input-group">
-  <span class="input-group-text">Profesión*</span>
+  <span class="input-group-text">Profesión</span>
   <input type="text" class="form-control" name="profesionM" placeholder="Profesión" id="estudios">
 </div>	
 <div class="input-group">
-  <span class="input-group-text">Tipo de trabajo*</span>
+  <span class="input-group-text">Tipo de trabajo</span>
   <input type="text" class="form-control"  name="tipoTrabajoM" placeholder="Tipo" id="estudios">
 </div>
 <div class="input-group">
-  <span class="input-group-text" > Nombre del lugar de trabajo*</span>
+  <span class="input-group-text" > Nombre del lugar de trabajo</span>
   <input type="text" class="form-control" name="lugarDeTrabajoM" placeholder="lugar de trabajo" id="estudios">
 </div>	
 <div class="input-group">

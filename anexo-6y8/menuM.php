@@ -26,6 +26,11 @@ include "../conexion.php";
 	<center>
 <div id="contenedor">
 <img src="../logo.png" id="logo"></a>
+<ul class="nav nav" style="margin: 5px; display: block;">
+  	<li class="nav-item">
+   	 	<a class="btn btn-primary" href="../index.php" >Página principal</a>
+  	</li>
+</ul>		
 <header id="menuA">
 	<br><br>
 <ul class="nav nav-pills" style="margin: 5px; display: block;">

@@ -87,9 +87,9 @@ if (isset($_SESSION['trabaja']) &&$_SESSION['trabaja']=='si') {
 
 <span class="input-group-text">Donde realizaste tus estudios de:</span>
 <div class="input-group" style="display: block;">
-	<input type="text" name="primaria"  placeholder="Primaria" class="form-control" id="estudios">
-	<input type="text" name="secundaria"  placeholder="Secundaria" class="form-control" id="estudios">
-	<input type="text" name="prepa"  placeholder="Preparatoria" class="form-control" id="estudios">
+	<input type="text" name="primaria"  placeholder="Primaria" required class="form-control" id="estudios">
+	<input type="text" name="secundaria"  placeholder="Secundaria" required class="form-control" id="estudios">
+	<input type="text" name="prepa"  placeholder="Preparatoria" required class="form-control" id="estudios">
 	<input type="text" name="estudiosSuperiores"  placeholder="Estudios Superiores" class="form-control" id="estudios">
 </div>
 
@@ -163,8 +163,8 @@ if (isset($_SESSION['trabaja']) &&$_SESSION['trabaja']=='si') {
 </div>			
 
 <div class="input-group">
-  <span class="input-group-text">Parentesco*:</span>
-  <input type="text" class="form-control" placeholder="Parentesco"  required name="parentesco" id="estudios">
+  <span class="input-group-text">Parentesco:</span>
+  <input type="text" class="form-control" placeholder="Parentesco"   name="parentesco" id="estudios">
 </div>	
 
 <div class="input-group">
@@ -180,12 +180,12 @@ if (isset($_SESSION['trabaja']) &&$_SESSION['trabaja']=='si') {
 
 <div class="input-group">
   <span class="input-group-text" id="ea"> A cuánto ascienden los ingresos mensuales de tu familia $*:</span>
-  <input type="number" class="form-control" placeholder="N"   name="ingresoMFamiliar" id="tel" min="0">
+  <input type="number" class="form-control" placeholder="N"  required name="ingresoMFamiliar" id="tel" min="0">
 </div>	
 
 <div class="input-group">
-  <span class="input-group-text" id="ea2">En caso de ser económicamente independiente, ¿a cuánto asciende tu ingreso? $*:</span>
-  <input type="number" class="form-control" placeholder="N"   name="tuIngreso" id="tel" min="0">
+  <span class="input-group-text" id="ea2">En caso de trabajar (Si no trabajas deja un 0), ¿A cuánto asciende tu ingreso?$*:</span>
+  <input type="number" class="form-control" placeholder="N" required  name="tuIngreso" id="tel" min="0">
 </div>	
 
 <h4>En caso de accidente avisar a:</h4>

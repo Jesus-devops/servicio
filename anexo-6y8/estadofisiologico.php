@@ -58,7 +58,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 </div>
 
 <div class="input-group">
-	<span class="input-group-text">¿Que preinscripción tiene?*</span>
+	<span class="input-group-text">¿Que preinscripción tiene?</span>
 	<input type="text" class="form-control" name="prescripcionCual" id="correoIn">
 </div>
 
@@ -175,7 +175,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</select>
 </div>
 <div class="input-group">
-	<span class="input-group-text">¿Observaciones de higiene?*</span>
+	<span class="input-group-text">¿Observaciones de higiene?</span>
 	<input type="text" class="form-control" name="observacionesHigiene" id="correoIn">
 </div>
 <br>
@@ -201,7 +201,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</div>
 		</td>
 		<td>
-			<input type="text" name="puntualO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="puntualO" placeholder="Observaciones" class="form-control" >
 		</td>
 	</tr>
 	<tr>
@@ -216,7 +216,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="timidoO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="timidoO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -231,7 +231,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="alegreO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="alegreO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -246,7 +246,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="agresivoO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="agresivoO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -261,7 +261,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="abiertoIdeasO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="abiertoIdeasO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -276,7 +276,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="reflexivoO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="reflexivoO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -291,7 +291,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="constanteO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="constanteO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -306,7 +306,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="optimistaO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="optimistaO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -321,7 +321,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="impulsivoO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="impulsivoO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -336,7 +336,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="silenciosoO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="silenciosoO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -351,7 +351,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>			
-			<input type="text" name="generosoO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="generosoO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -366,7 +366,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="inquietoO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="inquietoO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -381,7 +381,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="humorO" placeholder="Observaciones*" class="form-control">
+			<input type="text" name="humorO" placeholder="Observaciones" class="form-control">
 		</td>	
 	</tr>
 	<tr>
@@ -396,7 +396,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="dominanteO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="dominanteO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -411,7 +411,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="egoistaO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="egoistaO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -426,7 +426,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="sumisoO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="sumisoO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -441,7 +441,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="confiadoO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="confiadoO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -456,7 +456,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="imaginativoO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="imaginativoO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -471,7 +471,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="iniciativaO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="iniciativaO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -486,7 +486,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="sociableO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="sociableO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -501,7 +501,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="responsableO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="responsableO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -516,7 +516,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="perseveranteO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="perseveranteO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -531,7 +531,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="motivadoO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="motivadoO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -546,7 +546,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="activoO" placeholder="Observaciones*" class="form-control" >
+			<input type="text" name="activoO" placeholder="Observaciones" class="form-control" >
 		</td>	
 	</tr>
 	<tr>
@@ -561,7 +561,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 			</select></div>
 		</td>
 		<td>
-			<input type="text" name="independienteO" placeholder="Observaciones*" class="form-control">
+			<input type="text" name="independienteO" placeholder="Observaciones" class="form-control">
 		</td>	
 	</tr>
 </table>

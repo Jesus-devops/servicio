@@ -28,6 +28,12 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	<center>
 <div id="contenedor">
 <header><a href="../index.php"><img src="../logo.png" id="logo"></a></header>
+<ul class="nav nav" style="margin: 5px; display: block;">
+  	<li class="nav-item">
+   	 	<a class="btn btn-primary" href="../index.php" >Página principal</a>
+		<a class="btn btn-primary" href="MenuM.php" >Menú editar alumno</a>
+  	</li>
+</ul>	
 
 <section>
 

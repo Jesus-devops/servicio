@@ -25,6 +25,11 @@ include "../conexion.php";
 <div id="contenedor">
 <header><a href="../index.php"><img src="../logo.png" id="logo"></a></header>
 
+<ul class="nav nav" style="margin: 5px; display: block;">
+  	<li class="nav-item">
+   	 	<a class="btn btn-primary" href="../index.php" >Página principal</a>
+  	</li>
+</ul>	 
 
 <div class="progress">
   <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 1%"></div>
