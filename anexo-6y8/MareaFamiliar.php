@@ -9,9 +9,7 @@ $re=$mysql->query("select noControl from areafamiliarysocial where noControl=".$
 		$noC=$f['noControl'];			
 	  	} 
 
-		if($_SESSION['noControl']==$noC) {
-		echo '<script type="text/javascript"> alert("Ha completado el formulario anterior"); window.location.href="psicopedagogica.php";</script>';
-		}
+		
 	}else{
 		echo '<script type="text/javascript"> alert("se perdio la sesion"); window.location.href="index.php";</script>';
 	}
@@ -39,9 +37,7 @@ $re=$mysql->query("select noControl from areafamiliarysocial where noControl=".$
 		<a class="btn btn-primary" href="MenuM.php" >Menú editar alumno</a>
   	</li>
 </ul>	
-<div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 37.5%"></div>
-</div>	
+
 <section>
 
 	<form action="altaAreaFamiliar.php" method = "post" enctype="multipart/form-data" id="agrega">
