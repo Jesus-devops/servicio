@@ -1,14 +1,6 @@
 <?php
+include "../conexion.php";
 
-$servername = "localhost";
-    $username = "root";
-  	$password = "1234";
-  	$dbname = "alumno";
- 
-	$mysql = new mysqli($servername, $username, $password, $dbname);
-      if($mysql->connect_error){
-        die("Conexión fallida: ".$conn->connect_error);
-      }
 
 
 	$noC=0;

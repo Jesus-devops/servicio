@@ -31,10 +31,6 @@ include "../conexion.php";
   	</li>
 </ul>	 
 
-<div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 1%"></div>
-</div>	
-
 <section>
 	<br>
 <form action="inter.php" method = "post" enctype="multipart/form-data" class="modificar">
@@ -44,6 +40,12 @@ include "../conexion.php";
 <input type="submit" name="accion" value="Modificar" id="aceptar" class="btn btn-primary">
 </div>
 </form>
+<br>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 1%"></div>
+</div>	
+
+
 <form action="altaAlumno1.php" method = "post" enctype="multipart/form-data" id="agrega">
 
 

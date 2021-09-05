@@ -1,5 +1,5 @@
 <?php 
-$con = $mysql= new mysqli("localhost","root","1234","alumno");
+$con = $mysql= new mysqli("localhost","root","","alumno");
 if ($mysql-> connect_error) {
 	die("problemas con la conexion a la base de datos");
 	echo $mysql-> connect_error;
