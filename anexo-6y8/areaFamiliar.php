@@ -33,14 +33,15 @@ $re=$mysql->query("select noControl from areafamiliarysocial where noControl=".$
 	<center>
 <div id="contenedor">
 <header><img src="../logo.png" id="logo"></header>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 37.5%"></div>
-</div>	
+	
 <section>
 
 	<form action="altaAreaFamiliar.php" method = "post" enctype="multipart/form-data" id="agrega">
 		
         <h2>Información Familiar </h2>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 37.5%"></div>
+</div>
 <br>
 
 

@@ -34,14 +34,15 @@ $re=$mysql->query("select noControl from psicopedagogica where noControl=".$_SES
 	<center>
 <div id="contenedor">
 <header><img src="../logo.png" id="logo"></header>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 62.5%"></div>
-</div>	
+
 <section>
 
 	<form action="altaPsicopedagogica.php" method = "post" enctype="multipart/form-data" id="agrega">
 
         <h2>Información Psicopedagógica</h2>
+ <div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 62.5%"></div>
+</div>	
 		<br>
 <div class="input-group">
 	<span class="input-group-text">¿Cómo te gustaría ser? </span>

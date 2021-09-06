@@ -26,13 +26,20 @@ include "../conexion.php";
 	<center>
 <div id="contenedor">
 <img src="../logo.png" id="logo"></a>
-<ul class="nav nav" style="margin: 5px; display: block;">
+<ul class="nav nav" style="margin: 5px; display: inline-flex;">
   	<li class="nav-item">
    	 	<a class="btn btn-primary" href="../index.php" >Página principal</a>
   	</li>
+
+<?php if (isset($_SESSION['noControl'])) { ?>
+  	<li class="nav-item">
+   	 	<a class="btn btn-primary" href="./cerrar.php" >Salir</a>
+  	</li>
+<?php }	 ?>
+
 </ul>		
 <header id="menuA">
-	<br><br>
+	<br>
 <ul class="nav nav-pills" style="margin: 5px; display: block;">
   	<li class="nav-item">
    	 	<a class="nav-link" href="Mindex.php" id="menuIndex">Alumno parte 1</a>

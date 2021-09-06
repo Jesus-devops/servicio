@@ -33,15 +33,15 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	<center>
 <div id="contenedor">
 <header><img src="../logo.png" id="logo"></header>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-</div>	
+
 <section>
 
 	<form action="altaestadofisiologico.php" method = "post" enctype="multipart/form-data" id="agrega">
 
         <h2>Estado Psicofisiológico</h2>
-
+<div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+</div>	
 			<?php
 			if (isset($_SESSION['noControl'])) {
 				echo '<input type="hidden" name="noControl" value="'.$_SESSION['noControl'].'" > ';

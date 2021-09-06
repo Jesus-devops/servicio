@@ -23,7 +23,7 @@ include "../conexion.php";
 
 	<center>
 <div id="contenedor">
-<header><a href="../index.php"><img src="../logo.png" id="logo"></a></header>
+<header><img src="../logo.png" id="logo"></header>
 
 <ul class="nav nav" style="margin: 5px; display: block;">
   	<li class="nav-item">
@@ -41,9 +41,7 @@ include "../conexion.php";
 </div>
 </form>
 <br>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 1%"></div>
-</div>	
+
 
 
 <form action="altaAlumno1.php" method = "post" enctype="multipart/form-data" id="agrega">
@@ -51,6 +49,9 @@ include "../conexion.php";
 
 	<div id="orden">
 	<h2> BIENVENIDO</h2>
+	<div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 1%"></div>
+</div>	
 	<br>
 <div class="input-group">
 	<span class="input-group-text" >Fotografia (Max. 1MB)</span>

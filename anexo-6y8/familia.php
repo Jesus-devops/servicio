@@ -56,15 +56,15 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 <div id="contenedor">
 <header><img src="../logo.png" id="logo"></header>
 
-<div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
-</div>	
+
 
 <section>
 
 	
 <form action="altaFamilia.php" method = "post" enctype="multipart/form-data" id="agrega">
-	
+	<div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
+</div>	
 <br>
        <?php 
 if ($_SESSION['padre']=='vive'||$_SESSION['madre']=='vive') {
