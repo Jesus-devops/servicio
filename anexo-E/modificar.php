@@ -27,7 +27,7 @@ if (isset($_POST['noControl'])) {
 
 <body>
 <center>
-<header class="tipoModificar"><a href="index.php"><img src="../logo.png" id="logo"></a></header>
+<header class="tipoModificar"><img src="../logo.png" id="logo"></header>
 <ul class="nav nav" style="margin: 5px; display: block;">
   	<li class="nav-item">
    	 	<a class="btn btn-primary" href="../index.php" >Página principal</a>
