@@ -25,7 +25,7 @@ include "../conexion.php";
 
 	<center>
 <div id="contenedor">
-<img src="../logo.png" id="logo"></a>
+<img src="../logo.png" id="logo"></a><br>
 <ul class="nav nav" style="margin: 5px; display: inline-flex;">
   	<li class="nav-item">
    	 	<a class="btn btn-primary" href="../index.php" >Página principal</a>
