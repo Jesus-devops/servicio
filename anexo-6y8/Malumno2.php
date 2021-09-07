@@ -6,7 +6,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 
 ?>
 <!DOCTYPE html>
-<html>
+<html class="modificarinfo">
 <head>
 	<meta charset="utf-8"/>
 	<title>Alumno Nuevo</title>
@@ -102,8 +102,7 @@ $re2=$mysql->query("select * from extra where noControl=".$_SESSION['noControl']
 <div class="input-group">
   <span class="input-group-text">Peso (kg)</span>
   <input type="number" class="form-control" placeholder="N"="true" name="peso" id="n2d" min="0" value=<?php echo $f['peso']; ?>>
-</div><div class="input-group">
-  <span class="input-group-text">Estatura (cm)</span>
+  <span class="input-group-text" style="margin-left:5px;">Estatura (cm)</span>
   <input type="number" class="form-control" name="estatura" placeholder="N" id="n2d" min="0" value=<?php echo $f['estatura']; ?>>
 </div>
 

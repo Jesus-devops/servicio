@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"  class="modificarinfo">
 
   <?php
 session_start();
@@ -216,7 +216,7 @@ while ($g=$re2->fetch_array()) { $c1=$g['celular1']; $c2=$g['celular2'];}
 
 </div>
 	
-	<br>
+
 		<input type="submit" name="accion" value="Enviar" id="aceptar" class="btn btn-success">
 	</form>
 

@@ -427,7 +427,9 @@ g{
  
 }
 
-
+.modificarinfo .input-group {
+  margin-bottom: 8px !important;
+}
 
 
 

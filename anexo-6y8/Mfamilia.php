@@ -12,7 +12,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"  class="modificarinfo">
 <head>
 	<meta charset="utf-8"/>
 	<title>Familia</title>

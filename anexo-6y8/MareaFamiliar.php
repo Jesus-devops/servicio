@@ -16,7 +16,7 @@ $re=$mysql->query("select noControl from areafamiliarysocial where noControl=".$
 
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"  class="modificarinfo">
 <head>
 	<meta charset="utf-8"/>
 	<title>Area Familiar</title>
