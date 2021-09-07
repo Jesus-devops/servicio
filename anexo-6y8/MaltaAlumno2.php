@@ -48,45 +48,28 @@
 	$avisarTelefono=$_POST['avisarTelefono'];
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	$Sql="update extra set 
-	primaria='".$_POST['primaria']."',
-	secundaria='".$_POST['secundaria']."',
-	prepa='".$_POST['prepa']."',
-	estudiosSuperiores='".$_POST['estudiosSuperiores']."',
-	fechaDeNacimiento='".$_POST['fechaDeNacimiento']."',
-	lugarDeNacimiento='".$_POST['lugarDeNacimiento']."',
-	peso=".$_POST['peso'].",
-	estatura=".$_POST['estatura'].",
-	estadoCivil='".$_POST['estadoCivil']."',
-	nHijos=".$_POST['nHijos'].",
-	domicilioActual='".$_POST['domicilioActual']."',
-	telefono=".$_POST['telefono'].",
-	tipoVivienda='".$_POST['tipoVivienda']."',
-	viviendaEs='".$_POST['viviendaEs']."',
-	nPersonas=".$_POST['nPersonas'].",
-	parentesco='".$_POST['parentesco']."',
-	vivira='".$_POST['vivira']."',
-	ingresoMFamiliar=".$_POST['ingresoMFamiliar'].",
-	tuIngreso=".$_POST['tuIngreso'].",
-	avisarNombre='".$_POST['avisarNombre']."',
-	avisarTelefono=".$_POST['avisarTelefono']." where noControl='".$_SESSION['noControl'];
+	primaria='".$primaria."',
+	secundaria='".$secundaria."',
+	prepa='".$prepa."',
+	estudiosSuperiores='".$estudiosSuperiores."',
+	fechaDeNacimiento='".$fechaDeNacimiento."',
+	lugarDeNacimiento='".$lugarDeNacimiento."',
+	peso=".$peso.",
+	estatura=".$estatura.",
+	estadoCivil='".$estadoCivil."',
+	nHijos=".$nHijos.",
+	domicilioActual='".$domicilioActual."',
+	telefono=".$telefono.",
+	tipoVivienda='".$tipoVivienda."',
+	viviendaEs='".$viviendaEs."',
+	nPersonas=".$nPersonas.",
+	parentesco='".$parentesco."',
+	vivira='".$vivira."',
+	ingresoMFamiliar=".$ingresoMFamiliar.",
+	tuIngreso=".$tuIngreso.",
+	avisarNombre='".$avisarNombre."',
+	avisarTelefono=".$avisarTelefono." where noControl='".$_SESSION['noControl'];
 	
 echo $Sql;
 	if ($mysql->query($Sql)or die($mysql-> error)) {
