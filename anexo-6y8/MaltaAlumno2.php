@@ -25,9 +25,6 @@
 	$avisarNombre="";
 	$avisarTelefono="";
 
-
-
-
 	$primaria=$_POST['primaria'];
 	$secundaria=$_POST['secundaria'];
 	$prepa=$_POST['prepa'];
