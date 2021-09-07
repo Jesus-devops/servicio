@@ -60,6 +60,7 @@ CREATE TABLE `alumno` (
   `trabaja` varchar(10) NOT NULL,
   `padre` varchar(8) NOT NULL,
   `madre` varchar(8) NOT NULL,
+  `nHermanos` int(2) NOT NULL,
   `becado` varchar(2) NOT NULL,
   `idAsesor` int(10) NOT NULL,
   PRIMARY KEY (`noControl`),
