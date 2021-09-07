@@ -1961,6 +1961,7 @@ insert  into `areafamiliarysocial`(`relacionFamilia`,`dificultades`,`tipoDificul
 /*Data for the table `asesor` */
 
 insert  into `asesor`(`idAsesor`,`nombre`,`correo`,`pass`,`nivel`) values 
+(0,'default','default','default',1),
 (1,'maria','1@1','123',1),
 (2,'jesus','2@2','123',2),
 (3,'6','4@4','123',2),

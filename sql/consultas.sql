@@ -1,7 +1,7 @@
 select * from alumno;
 select * from celular;
 select * from anexoe; 
-delete from alumno where noControl between 16640080 and 16640099;
+delete from alumno where noControl between 100 and 16640099;
 select * from alumno a join anexoe e on e.noControl = a.noControl where grupo='H' and semestre=11;
 select * from alumno where estado='baja';
 select * from anexoe where estado='baja';

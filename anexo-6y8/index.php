@@ -60,12 +60,11 @@ include "../conexion.php";
 
 <div class="input-group">
   <span class="input-group-text">No. Control</span>
-  <input type="number" class="form-control" placeholder="No. Control" id="noC" name="noControl" required>
+  <input type="number" class="form-control" placeholder="No. Control" id="noC" name="noControl" required="true">
 </div>
 <div class="input-group">
   <span class="input-group-text" style="margin-left: 15px;">Semestre</span>
 <select name="semestre" required="true"> 
-		<option selected disabled >-----</option>
 		<option value="1">1</option>
 		<option value="2">2</option>
 		<option value="3">3</option>
@@ -84,19 +83,18 @@ include "../conexion.php";
 
 <div class="input-group">
   <span class="input-group-text" style="margin-left: 15px;">Grupo</span>
-	<select name="grupo" required style="margin: 0px;"> 
-		<option selected disabled >-----</option>
+	<select name="grupo" style="margin: 0px;" required="true"> 
 		<option value="A">A</option>
 		<option value="C">C</option>
 		<option value="F">F</option>
 		<option value="G">G</option>
-		<option value="H">H</option>
+		<option value="H">H</option> 
 		<option value="I">I</option>
 		<option value="J">J</option>
 		<option value="M">M</option>
 	</select>
 <span class="input-group-text" style="margin-left: 15px;">Turno</span>
-	<select name="turno"  required> 
+	<select name="turno"  required="true"> 
 		<option selected disabled >-----</option>
 		<option value=""></option>
 		<option value="Bis">Bis</option>
@@ -109,7 +107,7 @@ include "../conexion.php";
 
 <div class="input-group">
 	<span class="input-group-text">Carrera a la que pertenece</span>
-	<select name="carrera" required>
+	<select name="carrera" required="true">
 		<option selected disabled value="">----------</option>
 		<option value="administracion">Administracion</option>
 		<option value="bioquimica">Bioquimica</option>

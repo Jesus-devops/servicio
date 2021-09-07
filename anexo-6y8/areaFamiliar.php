@@ -103,6 +103,11 @@ if ($_SESSION['padre']=='vive') {
 </div>
 
 <?php 
+}else{
+	 ?>
+  <input type="hidden" name="relacionP" value="">
+  <input type="hidden" name="actitudP" value="">
+	 <?php 
 }
 } if (isset($_SESSION['madre'])) {
 if ($_SESSION['madre']=='vive') {
@@ -124,6 +129,11 @@ if ($_SESSION['madre']=='vive') {
   <input type="text" class="form-control" placeholder="Actitud"   name="actitudM" id="txtlargo">
 </div>
 <?php 
+}else{
+	 ?>
+  <input type="hidden" name="relacionM" value="">
+  <input type="hidden" name="actitudM" value="">
+	 <?php 
 }
 }
 ?>
