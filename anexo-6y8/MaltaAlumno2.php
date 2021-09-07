@@ -2,69 +2,31 @@
 	session_start();
 	include ("../conexion.php");
 
-if (empty($_POST['primaria'])) {	$primaria="";
-
-if (empty($_POST['secundaria'])) {	$secundaria="";
-	
-if (empty($_POST['prepa'])) {	$prepa="";
-	
-if (empty($_POST['estudiosSuperiores'])) {	$estudiosSuperiores="";
-	
-if (empty($_POST['fechaDeNacimiento'])) {	$fechaDeNacimiento="";
-	
-if (empty($_POST['lugarDeNacimiento'])) {	$lugarDeNacimiento="";
-	
-if (empty($_POST['peso'])) {	$peso=0;
-	
-if (empty($_POST['estatura'])) {	$estatura=0;
-	
-if (empty($_POST['estadoCivil'])) {	$estadoCivil="";
-	
-if (empty($_POST['nHijos'])) {		$nHijos=0;
-
-if (empty($_POST['domicilioActual'])) {	$domicilioActual="";
-	
-if (empty($_POST['telefono'])) {	$telefono=0;
-	
-if (empty($_POST['tipoVivienda'])) {	$tipoVivienda="";
-	
-if (empty($_POST['viviendaEs'])) {	$viviendaEs="";
-	
-if (empty($_POST['nPersonas'])) {	$nPersonas=0;
-	
-if (empty($_POST['parentesco'])) {		$parentesco="";
-
-if (empty($_POST['vivira'])) {	$vivira="";
-	
-if (empty($_POST['ingresoMFamiliar'])) {	$ingresoMFamiliar=0;
-	
-if (empty($_POST['tuIngreso'])) {	$tuIngreso=0;
-	
-if (empty($_POST['avisarNombre'])) {	$avisarNombre="";
-	
-if (empty($_POST['avisarTelefono'])) {	$avisarTelefono=0;
+if (empty($_POST['primaria'])) {	$primaria="";}else{ $primaria=$_POST['primaria'];}
+if (empty($_POST['secundaria'])) {	$secundaria="";}else{ 	$secundaria=$_POST['secundaria'];}
+if (empty($_POST['prepa'])) {	$prepa="";}else{ 	$prepa=$_POST['prepa'];}
+if (empty($_POST['estudiosSuperiores'])) {	$estudiosSuperiores="";}else{ 	$estudiosSuperiores=$_POST['estudiosSuperiores'];}
+if (empty($_POST['fechaDeNacimiento'])) {	$fechaDeNacimiento="";}else{ 	$fechaDeNacimiento=$_POST['fechaDeNacimiento'];}
+if (empty($_POST['lugarDeNacimiento'])) {	$lugarDeNacimiento="";}else{ 	$lugarDeNacimiento=$_POST['lugarDeNacimiento'];}
+if (empty($_POST['peso'])) {	$peso=0;}else{ 	$peso=$_POST['peso'];}
+if (empty($_POST['estatura'])) {	$estatura=0;}else{ 	$estatura=$_POST['estatura'];}
+if (empty($_POST['estadoCivil'])) {	$estadoCivil="";}else{ }	$estadoCivil=$_POST['estadoCivil'];}
+if (empty($_POST['nHijos'])) {		$nHijos=0;}else{ 	$nHijos=$_POST['nHijos'];}
+if (empty($_POST['domicilioActual'])) {	$domicilioActual="";}else{ 	$domicilioActual=$_POST['domicilioActual'];}
+if (empty($_POST['telefono'])) {	$telefono=0;}else{ 	$telefono=$_POST['telefono'];}
+if (empty($_POST['tipoVivienda'])) {	$tipoVivienda="";}else{ 	$tipoVivienda=$_POST['tipoVivienda'];}
+if (empty($_POST['viviendaEs'])) {	$viviendaEs="";}else{ 	$viviendaEs=$_POST['viviendaEs'];}
+if (empty($_POST['nPersonas'])) {	$nPersonas=0;}else{ 	$nPersonas=$_POST['nPersonas'];}
+if (empty($_POST['parentesco'])) {		$parentesco="";}else{ 	$parentesco=$_POST['parentesco'];}
+if (empty($_POST['vivira'])) {	$vivira="";}else{ 	$vivira=$_POST['vivira'];}
+if (empty($_POST['ingresoMFamiliar'])) {	$ingresoMFamiliar=0;}else{ 	$ingresoMFamiliar=$_POST['ingresoMFamiliar'];}
+if (empty($_POST['tuIngreso'])) {	$tuIngreso=0;}else{ 	$tuIngreso=$_POST['tuIngreso'];}
+if (empty($_POST['avisarNombre'])) {	$avisarNombre="";}else{ $avisarNombre=$_POST['avisarNombre'];}
+if (empty($_POST['avisarTelefono'])) {	$avisarTelefono=0;}else{ $avisarTelefono=$_POST['avisarTelefono'];}
 	
 
-	$secundaria=$_POST['secundaria'];
-	$prepa=$_POST['prepa'];
-	$estudiosSuperiores=$_POST['estudiosSuperiores'];
-	$fechaDeNacimiento=$_POST['fechaDeNacimiento'];
-	$lugarDeNacimiento=$_POST['lugarDeNacimiento'];
-	$peso=$_POST['peso'];
-	$estatura=$_POST['estatura'];
-	$estadoCivil=$_POST['estadoCivil'];
-	$nHijos=$_POST['nHijos'];
-	$domicilioActual=$_POST['domicilioActual'];
-	$telefono=$_POST['telefono'];
-	$tipoVivienda=$_POST['tipoVivienda'];
-	$viviendaEs=$_POST['viviendaEs'];
-	$nPersonas=$_POST['nPersonas'];
-	$parentesco=$_POST['parentesco'];
-	$vivira=$_POST['vivira'];
-	$ingresoMFamiliar=$_POST['ingresoMFamiliar'];
-	$tuIngreso=$_POST['tuIngreso'];
-	$avisarNombre=$_POST['avisarNombre'];
-	$avisarTelefono=$_POST['avisarTelefono'];
+	
+	
 
 
 	$Sql="update extra set 
