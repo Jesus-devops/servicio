@@ -2,30 +2,49 @@
 	session_start();
 	include ("../conexion.php");
 
+if (empty($_POST['primaria'])) {	$primaria="";
 
-	$primaria="";
-	$secundaria="";
-	$prepa="";
-	$estudiosSuperiores="";
-	$fechaDeNacimiento="";
-	$lugarDeNacimiento="";
-	$peso="";
-	$estatura="";
-	$estadoCivil="";
-	$nHijos="";
-	$domicilioActual="";
-	$telefono="";
-	$tipoVivienda="";
-	$viviendaEs="";
-	$nPersonas="";
-	$parentesco="";
-	$vivira="";
-	$ingresoMFamiliar="";
-	$tuIngreso="";
-	$avisarNombre="";
-	$avisarTelefono="";
+if (empty($_POST['secundaria'])) {	$secundaria="";
+	
+if (empty($_POST['prepa'])) {	$prepa="";
+	
+if (empty($_POST['estudiosSuperiores'])) {	$estudiosSuperiores="";
+	
+if (empty($_POST['fechaDeNacimiento'])) {	$fechaDeNacimiento="";
+	
+if (empty($_POST['lugarDeNacimiento'])) {	$lugarDeNacimiento="";
+	
+if (empty($_POST['peso'])) {	$peso=0;
+	
+if (empty($_POST['estatura'])) {	$estatura=0;
+	
+if (empty($_POST['estadoCivil'])) {	$estadoCivil="";
+	
+if (empty($_POST['nHijos'])) {		$nHijos=0;
 
-	$primaria=$_POST['primaria'];
+if (empty($_POST['domicilioActual'])) {	$domicilioActual="";
+	
+if (empty($_POST['telefono'])) {	$telefono=0;
+	
+if (empty($_POST['tipoVivienda'])) {	$tipoVivienda="";
+	
+if (empty($_POST['viviendaEs'])) {	$viviendaEs="";
+	
+if (empty($_POST['nPersonas'])) {	$nPersonas=0;
+	
+if (empty($_POST['parentesco'])) {		$parentesco="";
+
+if (empty($_POST['vivira'])) {	$vivira="";
+	
+if (empty($_POST['ingresoMFamiliar'])) {	$ingresoMFamiliar=0;
+	
+if (empty($_POST['tuIngreso'])) {	$tuIngreso=0;
+	
+if (empty($_POST['avisarNombre'])) {	$avisarNombre="";
+	
+if (empty($_POST['avisarTelefono'])) {	$avisarTelefono=0;
+	
+
 	$secundaria=$_POST['secundaria'];
 	$prepa=$_POST['prepa'];
 	$estudiosSuperiores=$_POST['estudiosSuperiores'];
@@ -69,26 +88,30 @@
 	ingresoMFamiliar=".$ingresoMFamiliar.",
 	tuIngreso=".$tuIngreso.",
 	avisarNombre='".$avisarNombre."',
-	avisarTelefono=".$avisarTelefono." where noControl='".$_SESSION['noControl'];
-	
-echo $Sql;
-	if ($mysql->query($Sql)or die($mysql-> error)) {
-			
-			$Sql2="update beca set 
-			institucion='".$_POST['institucion']."',
-			nombreInstitucion='".$_POST['nombreInstitucion']."' where noControl=".$_SESSION['noControl'];
+	avisarTelefono=".$avisarTelefono." where noControl=".$_SESSION['noControl'];
 
-			$mysql->query($Sql2)or die($mysql-> error);	
+
+
+		$institucion="";
+		$nombreInstitucion="";
+			
+		$nombreEmpresa="";
+		$horario="";
+
+
+		$institucion=$_POST['institucion'];
+		$nombreInstitucion=$_POST['nombreInstitucion'];
 		
-			
-			$Sql3="insert trabajo set 
-			nombreEmpresa='".$_POST['nombreEmpresa']."',
-			horario='".$_POST['horario']."' where noControl=".$_SESSION['noControl'];
+		$nombreEmpresa=$_POST['nombreEmpresa'];
+		$horario=$_POST['horario'];
 
-			$mysql->query($Sql3)or die($mysql-> error);		
 
-			echo '<script type="text/javascript">  window.location.href="Mfamilia.php";</script>';
-			
+
+
+
+	if ($mysql->query($Sql)or die($mysql-> error)) {
+		
+			echo '<script type="text/javascript">  alert("Se modifico correctamente"); window.location.href="Malumno2.php";</script>';
 			
 		}else{
 			echo '<script type="text/javascript"> alert("No agrego")</script>'; 
