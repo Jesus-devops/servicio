@@ -3,26 +3,6 @@ session_start();
 include "../conexion.php";
 
 if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
-	
-	$re=$mysql->query("select noControl from extra where noControl=".$_SESSION['noControl'])or die($mysql-> error);
-		$noC=0;	
-		while ($f=$re->fetch_array()) { 
-		$noC=$f['noControl'];			
-	  	} 
-	  	$re=$mysql->query("select noControl from beca where noControl=".$_SESSION['noControl'])or die($mysql-> error);
-		$noC=0;	
-		while ($f=$re->fetch_array()) { 
-		$noC=$f['noControl'];			
-	  	} 
-	  	$re=$mysql->query("select noControl from trabajo where noControl=".$_SESSION['noControl'])or die($mysql-> error);
-		$noC=0;	
-		while ($f=$re->fetch_array()) { 
-		$noC=$f['noControl'];			
-	  	} 
-
-		if($_SESSION['noControl']==$noC) {
-		
-
 
 ?>
 <!DOCTYPE html>
@@ -226,10 +206,7 @@ $re2=$mysql->query("select * from extra where noControl=".$_SESSION['noControl']
 </center>
 </body>
 <?php 
-}
-	else{
-		echo '<script type="text/javascript"> alert("el alumno aun no ha ha registrado este informacion"); window.location.href="menuM.php";</script>';
-	}
+	
 }
  ?>
 </html>
