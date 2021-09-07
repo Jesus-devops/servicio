@@ -26,6 +26,7 @@ if (isset($_SESSION['id'])) {
 <ul class="nav nav-pills" style="margin: 5px">
 
 		<li class="nav-item"><a class="nav-link" href="../login/cerrar.php">Cerrar sesion</a>
+		</li><li class="nav-item"><a class="nav-link" href="./eliminar2.php">limpiar sesion</a>
 		</li>
 
 </ul>
