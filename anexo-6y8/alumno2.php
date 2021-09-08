@@ -50,7 +50,7 @@ $re=$mysql->query("select noControl from extra where noControl=".$_SESSION['noCo
 if (isset($_SESSION['becado']) &&$_SESSION['becado']=='si') {
 	?>
 <div class="input-group">
-	<span class="input-group-text" >becado por</span>
+	<span class="input-group-text" >Becado por*</span>
 	<select name="institucion" required>
 		<option selected disabled value="">----------</option>
 		<option value="Gobierno federal">Gobierno federal</option>
@@ -60,7 +60,7 @@ if (isset($_SESSION['becado']) &&$_SESSION['becado']=='si') {
 </div>			
 <?php  ?>
 <div class="input-group">
-  <span class="input-group-text">Nombre de la institucion</span>
+  <span class="input-group-text">Nombre de la institucion*</span>
   <input type="text" class="form-control" placeholder="Institucion" name="nombreInstitucion" id="estudios">
 </div>
 
@@ -69,12 +69,12 @@ if (isset($_SESSION['becado']) &&$_SESSION['becado']=='si') {
 if (isset($_SESSION['trabaja']) &&$_SESSION['trabaja']=='si') {
 	?>
 <div class="input-group">
-  <span class="input-group-text">Nombre de empresa donde trabajas</span>
+  <span class="input-group-text">Nombre de empresa donde trabajas*</span>
   <input type="text" class="form-control" placeholder="Empresa" name="nombreEmpresa" id="txtlargo">
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">Horario</span>
+  <span class="input-group-text">Horario*</span>
 	<select name="horario" required>
 		<option selected disabled value="">-----</option>
 		<option value="matutino">Matutino</option>
@@ -85,7 +85,7 @@ if (isset($_SESSION['trabaja']) &&$_SESSION['trabaja']=='si') {
 
 <?php } ?>
 
-<span class="input-group-text">Donde realizaste tus estudios de:</span>
+<span class="input-group-text">Donde realizaste tus estudios de*:</span>
 <div class="input-group" style="display: block;">
 	<input type="text" name="primaria"  placeholder="Primaria" required class="form-control" id="estudios">
 	<input type="text" name="secundaria"  placeholder="Secundaria" required class="form-control" id="estudios">
@@ -94,25 +94,25 @@ if (isset($_SESSION['trabaja']) &&$_SESSION['trabaja']=='si') {
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">Fecha de nacimiento</span>
+  <span class="input-group-text">Fecha de nacimiento*</span>
   <input type="date" class="form-control" required  name="fechaDeNacimiento" id="fecha">
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">Lugar de nacimiento</span>
+  <span class="input-group-text">Lugar de nacimiento*</span>
   <input type="text" class="form-control" placeholder="Lugar de nacimiento"  required  name="lugarDeNacimiento" id="estudios">
 </div>
 	
 <div class="input-group">
-  <span class="input-group-text">Peso (kg)</span>
+  <span class="input-group-text">Peso (kg)*</span>
   <input type="number" class="form-control" required placeholder="N" required="true" name="peso" id="n2d" min="0">
 </div><div class="input-group">
-  <span class="input-group-text">Estatura (cm)</span>
+  <span class="input-group-text">Estatura (cm)*</span>
   <input type="number" class="form-control" required name="estatura" placeholder="N" required id="n2d" min="0">
 </div>
 
 <div class="input-group">
-	<span class="input-group-text" >Estado civil</span>
+	<span class="input-group-text" >Estado civil*</span>
 	<select name="estadoCivil" required>
 		<option selected disabled value="">-----</option>
 		<option value="soltero">Soltero(a)</option>
@@ -122,23 +122,23 @@ if (isset($_SESSION['trabaja']) &&$_SESSION['trabaja']=='si') {
 		<option value="otro">Otro</option>
 	</select>
 </div><div class="input-group">
-  <span class="input-group-text">No. de hijos*</span>
+  <span class="input-group-text">No. de hijos</span>
   <input type="number" class="form-control" placeholder="N" name="nHijos" id="n2d" min="0">
 </div>
 
 
 <div class="input-group">
-  <span class="input-group-text">Domicilio actual</span>
+  <span class="input-group-text">Domicilio actual*</span>
   <input type="text" class="form-control" placeholder="Domicilio actual"  required="true" name="domicilioActual" id="estudios">
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">Teléfono domicilio</span>
+  <span class="input-group-text">Teléfono domicilio*</span>
   <input type="number" class="form-control" placeholder="Teléfono"  required="true" name="telefono" id="tel" min="0">
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">Tipo de vivienda</span>
+  <span class="input-group-text">Tipo de vivienda*</span>
 	<select name="tipoVivienda" required>
 		<option selected disabled value="">-----</option>
 		<option value="casa">Casa</option>
@@ -147,7 +147,7 @@ if (isset($_SESSION['trabaja']) &&$_SESSION['trabaja']=='si') {
 </div>
 	
 <div class="input-group">
-  <span class="input-group-text">La casa o departamento donde vives es</span>
+  <span class="input-group-text">La casa o departamento donde vives es*</span>
   <select name="viviendaEs" required>
 		<option selected disabled value="">-----</option>
 		<option value="propia">Propia</option>
@@ -158,17 +158,17 @@ if (isset($_SESSION['trabaja']) &&$_SESSION['trabaja']=='si') {
 </div>			
 			
 <div class="input-group">
-  <span class="input-group-text">No. de personas con las que vives</span>
+  <span class="input-group-text">No. de personas con las que vives*</span>
   <input type="number" class="form-control" placeholder="N"  required name="nPersonas" id="n2d" min="0">
 </div>			
 
 <div class="input-group">
-  <span class="input-group-text">Parentesco:</span>
+  <span class="input-group-text">Parentesco*</span>
   <input type="text" class="form-control" placeholder="Parentesco"   name="parentesco" id="estudios">
 </div>	
 
 <div class="input-group">
-  <span class="input-group-text">En el transcurso de tus estudios viviras:</span>
+  <span class="input-group-text">En el transcurso de tus estudios viviras*</span>
   <select name="vivira" required>
 		<option selected disabled value="">----------</option>
 		<option value="con mi familia">Con mi familia</option>
@@ -179,7 +179,7 @@ if (isset($_SESSION['trabaja']) &&$_SESSION['trabaja']=='si') {
 </div>		
 
 <div class="input-group">
-  <span class="input-group-text" id="ea"> A cuánto ascienden los ingresos mensuales de tu familia $*:</span>
+  <span class="input-group-text" id="ea"> A cuánto ascienden los ingresos mensuales de tu familia $</span>
   <input type="number" class="form-control" placeholder="N"  required name="ingresoMFamiliar" id="tel" min="0">
 </div>	
 
@@ -190,11 +190,11 @@ if (isset($_SESSION['trabaja']) &&$_SESSION['trabaja']=='si') {
 
 <h4>En caso de accidente avisar a:</h4>
 <div class="input-group">
-  <span class="input-group-text">Nombre</span>
+  <span class="input-group-text">Nombre*</span>
   <input type="text" class="form-control" placeholder="Nombre completo"   name="avisarNombre" id="correoIn" required>
 </div>
 <div class="input-group">
-  <span class="input-group-text">Teléfono</span>
+  <span class="input-group-text">Teléfono*</span>
   <input type="number" class="form-control" placeholder="Teléfono"   name="avisarTelefono" id="tel" min="0" required>
 </div>
 		<br>
