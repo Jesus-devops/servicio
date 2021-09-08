@@ -11,7 +11,7 @@ $p='';
 	}
 	
 
-		$Sql="insert into estadopsicofisiologico (tienePrescripcion,cualPrescripcion,manosPiesHinchados,dolorVientre,dolorCabezaVomito,perdidaEquilibrio,
+		$Sql="update estadopsicofisiologico set (tienePrescripcion,cualPrescripcion,manosPiesHinchados,dolorVientre,dolorCabezaVomito,perdidaEquilibrio,
 		fatigaAgotamiento,perdidaVistaOido,DificilDormir,pesadillasTerrorNocturnoA,incontinencia,tartamudeo,miedoIntensoA,observacionesHigiene,noControl) values(
 							'".$_POST['prescripcionTiene']."',
 							'".$p."',
@@ -30,7 +30,7 @@ $p='';
 							'".$_SESSION['noControl']."')";
 
 
-		$Sql2="insert into caracteristicaspersonales (idCP,puntual,timido,alegre,agresivo,abiertoIdeas,reflexivo,constante,optimista,impulsivo,silencioso,generoso,inquieto,humor,dominante,egoista,sumiso,confiado,imaginativo,iniciativa,sociable,responsable,perseverante,motivado,activo,independiente,noControl) values(
+		$Sql2="update caracteristicaspersonales set (idCP,puntual,timido,alegre,agresivo,abiertoIdeas,reflexivo,constante,optimista,impulsivo,silencioso,generoso,inquieto,humor,dominante,egoista,sumiso,confiado,imaginativo,iniciativa,sociable,responsable,perseverante,motivado,activo,independiente,noControl) values(
 						'".$_SESSION['noControl']."',		
 						'".$_POST['puntual']."',
 						'".$_POST['timido']."',
@@ -59,7 +59,7 @@ $p='';
 						'".$_POST['independiente']."',
 						'".$_SESSION['noControl']."')";
 
-		$Sql3="insert into observaciones (idCP,puntualO,timidoO,alegreO,agresivoO,abiertoIdeasO,reflexivoO, constanteO,optimistaO,impulsivoO,silenciosoO,generosoO,inquietoO,humorO,dominanteO,egoistaO,sumisoO,confiadoO,imaginativoO, iniciativaO,sociableO,responsableO,perseveranteO,motivadoO,activoO,independienteO) values(	
+		$Sql3="update observaciones set (idCP,puntualO,timidoO,alegreO,agresivoO,abiertoIdeasO,reflexivoO, constanteO,optimistaO,impulsivoO,silenciosoO,generosoO,inquietoO,humorO,dominanteO,egoistaO,sumisoO,confiadoO,imaginativoO, iniciativaO,sociableO,responsableO,perseveranteO,motivadoO,activoO,independienteO) values(	
 						'".$_SESSION['noControl']."',	
 						'".$_POST['puntualO']."',
 						'".$_POST['timidoO']."',

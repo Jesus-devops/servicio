@@ -34,7 +34,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 </div>	
 
 <section>
-<form action="altaAlumno2.php" method = "post" enctype="multipart/form-data" id="agrega">
+<form action="MaltaAlumno2.php" method = "post" enctype="multipart/form-data" id="agrega">
 	<?php 
 	$re=$mysql->query("select * from beca where noControl=".$_SESSION['noControl'])or die($mysql-> error);
 		 $i="";$ni="";
@@ -162,7 +162,7 @@ $re2=$mysql->query("select * from extra where noControl=".$_SESSION['noControl']
 </div>			
 
 <div class="input-group">
-  <span class="input-group-text">Parentesco*:</span>
+  <span class="input-group-text">Parentesco:</span>
   <input type="text" class="form-control" placeholder="Parentesco"  required name="parentesco" id="estudios" value=<?php echo $f['parentesco']; ?>>
 </div>	
 
@@ -183,7 +183,7 @@ $re2=$mysql->query("select * from extra where noControl=".$_SESSION['noControl']
 </div>	
 
 <div class="input-group">
-  <span class="input-group-text" id="ea2">En caso de ser económicamente independiente, ¿a cuánto asciende tu ingreso? $*:</span>
+  <span class="input-group-text" id="ea2">En caso de trabajar (Si no trabajas deja un 0), ¿A cuánto asciende tu ingreso?$*:</span>
   <input type="number" class="form-control" placeholder="N"   name="tuIngreso" id="tel" min="0" value=<?php echo $f['tuIngreso']; ?>>
 </div>	
 

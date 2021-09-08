@@ -8,8 +8,6 @@ include "../conexion.php";
 if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 
 ?>
-
-
 <head>
 	<meta charset="utf-8"/>
 	<title>Inicio</title>
@@ -23,8 +21,6 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 </head>	
 
 <body>
-
-
 	<center>
 <div id="contenedor">
 <header><a href="../index.php"><img src="../logo.png" id="logo"></a></header>
@@ -44,13 +40,11 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	<br>
 
 <?php  
-
 $re=$mysql->query("select * from alumno where noControl=".$_SESSION['noControl'])or die($mysql-> error);
 		while ($f=$re->fetch_array()) { 
 		$f['noControl'];	
 ?>
 	
-
 <div class="input-group">
   <span class="input-group-text">No. Control</span>
   <input type="number" class="form-control" placeholder="No. Control" id="noC" name="noControl" required value=<?php echo $f['noControl'];?>>
@@ -127,7 +121,7 @@ $re=$mysql->query("select * from alumno where noControl=".$_SESSION['noControl']
 
 <div class="input-group">
   <span class="input-group-text">Edad</span>
-  <input type="number" class="form-control" placeholder="N"  required="true" name="edad" id="n2d" min="10" max="130"value="<?php echo $f['edad'] ?>">
+  <input type="number" class="form-control" placeholder="N"  required="true" name="edad" id="n2d" min="17" max="100"value="<?php echo $f['edad'] ?>">
 
 	<span class="input-group-text" style="margin-left: 15px;">Sexo</span>
 	<select name="sexo" required>
@@ -141,6 +135,8 @@ $re=$mysql->query("select * from alumno where noControl=".$_SESSION['noControl']
   <span class="input-group-text">Correo electrónico</span>
   <input type="email" class="form-control" placeholder="ejemplo@outlook.com"  required="true" name="email" id="estudios" value="<?php echo $f['email'] ?>">
 </div>
+
+
 
 <div class="input-group">
   <span class="input-group-text">Código Postal</span>
@@ -204,12 +200,13 @@ $c1=0;$c2=0;
 while ($g=$re2->fetch_array()) { $c1=$g['celular1']; $c2=$g['celular2'];}
 
 ?>
+<h5>Telefono de contacto para el alumno: </h5>
 <div class="input-group">
   <span class="input-group-text">Celular 1*</span>
   <input type="number" class="form-control" placeholder="Celular 1" name="celular1" id="tel"value=<?php echo $c1; ?>>
   <div class="input-group">
 </div>
-  <span class="input-group-text">Celular 2*</span>
+  <span class="input-group-text">Celular 2</span>
   <input type="number" class="form-control" placeholder="Celular 2" name="celular2" id="tel"value=<?php echo $c2;  ?>>
 </div>
 <?php ?>
