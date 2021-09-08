@@ -25,28 +25,28 @@ if (empty($_POST['avisarNombre'])) {	$avisarNombre="";}else{ $avisarNombre=$_POS
 if (empty($_POST['avisarTelefono'])) {	$avisarTelefono=0;}else{$avisarTelefono=$_POST['avisarTelefono'];}
 
 
-	$Sql="update extra set 
-	primaria='".$primaria."',
-	secundaria='".$secundaria."',
-	prepa='".$prepa."',
-	estudiosSuperiores='".$estudiosSuperiores."',
-	fechaDeNacimiento='".$fechaDeNacimiento."',
-	lugarDeNacimiento='".$lugarDeNacimiento."',
-	peso=".$peso.",
-	estatura=".$estatura.",
-	estadoCivil='".$estadoCivil."',
-	nHijos=".$nHijos.",
-	domicilioActual='".$domicilioActual."',
-	telefono=".$telefono.",
-	tipoVivienda='".$tipoVivienda."',
-	viviendaEs='".$viviendaEs."',
-	nPersonas=".$nPersonas.",
-	parentesco='".$parentesco."',
-	vivira='".$vivira."',
-	ingresoMFamiliar=".$ingresoMFamiliar.",
-	tuIngreso=".$tuIngreso.",
-	avisarNombre='".$avisarNombre."',
-	avisarTelefono=".$avisarTelefono." where noControl=".$_SESSION['noControl'];
+	$Sql='update extra set 
+	primaria="'.$primaria.'",
+	secundaria="'.$secundaria.'",
+	prepa="'.$prepa.'",
+	estudiosSuperiores="'.$estudiosSuperiores.'",
+	fechaDeNacimiento="'.$fechaDeNacimiento.'",
+	lugarDeNacimiento="'.$lugarDeNacimiento.'",
+	peso='.$peso.',
+	estatura='.$estatura.',
+	estadoCivil="'.$estadoCivil.'",
+	nHijos='.$nHijos.',
+	domicilioActual="'.$domicilioActual.'",
+	telefono='.$telefono.',
+	tipoVivienda="'.$tipoVivienda.'",
+	viviendaEs="'.$viviendaEs.'",
+	nPersonas='.$nPersonas.',
+	parentesco="'.$parentesco.'",
+	vivira="'.$vivira.'",
+	ingresoMFamiliar='.$ingresoMFamiliar.',
+	tuIngreso='.$tuIngreso.',
+	avisarNombre="'.$avisarNombre.'",
+	avisarTelefono='.$avisarTelefono.' where noControl='.$_SESSION['noControl'];
 
 if (empty($_POST['institucion'])) {		$institucion="";}else{ 		$institucion=$_POST['institucion'];}
 if (empty($_POST['nombreInstitucion'])) {$nombreInstitucion="";}else{$nombreInstitucion=$_POST['nombreInstitucion'];}
@@ -71,25 +71,25 @@ $Sql3="";
 			}
 
 		if ($_SESSION['noControl']==$beca) {
-			$Sql2="update beca set 
-			institucion='".$institucion."',
-			nombreInstitucion='".$nombreInstitucion."' where noControl=".$_SESSION['noControl'];
+			$Sql2='update beca set 
+			institucion="'.$institucion.'",
+			nombreInstitucion="'.$nombreInstitucion.'" where noControl='.$_SESSION['noControl'];
 		}else{
-				$Sql2="insert into beca (institucion,nombreInstitucion,noControl) values(
-					'".$institucion."',
-					'".$nombreInstitucion."',
-					".$_SESSION['noControl'].")";
+				$Sql2='insert into beca (institucion,nombreInstitucion,noControl) values(
+					"'.$institucion.'",
+					"'.$nombreInstitucion.'",
+					'.$_SESSION['noControl'].')';
 
 		}
-		if ($_SESSION['noControl']==$trabajo) {
-			$Sql3="update trabajo set 
-			nombreEmpresa='".$nombreEmpresa."',
-			horario='".$horario."' where noControl=".$_SESSION['noControl'];
+		if ($_SESSION["noControl"]==$trabajo) {
+			$Sql3='update trabajo set 
+			nombreEmpresa="'.$nombreEmpresa.'",
+			horario="'.$horario.'" where noControl='.$_SESSION['noControl'];
 		}else{
-				$Sql3="insert into trabajo (nombreEmpresa,horario,noControl) values(
-					'".$nombreEmpresa."',
-					'".$horario."',
-					".$_SESSION['noControl'].")";
+				$Sql3='insert into trabajo (nombreEmpresa,horario,noControl) values(
+					"'.$nombreEmpresa.'",
+					"'.$horario.'",
+					'.$_SESSION['noControl'].')';
 		}
 
 			$mysql->query($Sql2)or die($mysql-> error);
