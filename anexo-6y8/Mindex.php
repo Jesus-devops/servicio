@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"  class="modificarinfo">
 
   <?php
 session_start();
@@ -23,7 +23,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 <body>
 	<center>
 <div id="contenedor">
-<header><a href="../index.php"><img src="../logo.png" id="logo"></a></header>
+<header><img src="../logo.png" id="logo"></header>
 <ul class="nav nav" style="margin: 5px; display: block;">
   	<li class="nav-item">
    	 	<a class="btn btn-primary" href="../index.php" >Página principal</a>
@@ -213,7 +213,7 @@ while ($g=$re2->fetch_array()) { $c1=$g['celular1']; $c2=$g['celular2'];}
 
 </div>
 	
-	<br>
+
 		<input type="submit" name="accion" value="Enviar" id="aceptar" class="btn btn-success">
 	</form>
 

@@ -1,107 +1,64 @@
 <?php
 	session_start();
-
 	include ("../conexion.php");
-	
-$p=0;
-$m=0;
-$h=0;
-
 
 if ($_SESSION['padre']=='vive'||$_SESSION['madre']=='vive') {
 	
-
 if ($_SESSION['padre']=='vive') {
-
-$proP='';$luP='';$tiP='';
 	
-if ($_POST['trabajaP']='no') {
-	$proP='';$luP='';$tiP='';	
-}else{
-	$proP=$_POST['profesionP'];
-	$luP=$_POST['lugarDeTrabajoP'];
-	$tiP=$_POST['tipoTrabajoP'];
-}
+	$nombreP=""; $edadP=""; $maxEscolaridadP=""; $trabajaP=""; $profesionP=""; $lugarDeTrabajoP=""; $tipoTrabajoP=""; $domicilioP=""; $telefonoP=0; 
+	if (empty($_POST['nombreP'])) {			$nombreP="";}else{ 		$nombreP=$_POST['nombreP'];}
+	if (empty($_POST['edadP'])) {			$edadP="";}else{ 		$edadP=$_POST['edadP'];}
+	if (empty($_POST['maxEscolaridadP'])) {	$maxEscolaridadP="";}else{$maxEscolaridadP=$_POST['maxEscolaridadP'];}
+	if (empty($_POST['trabajaP'])) {		$trabajaP="";}else{ 	$trabajaP=$_POST['trabajaP'];     
+			if ($trabajaP=='si') {
+					if (empty($_POST['profesionP'])) {		$profesionP="";}else{ 	$profesionP=$_POST['profesionP'];}
+					if (empty($_POST['lugarDeTrabajoP'])){	$lugarDeTrabajoP="";}else{$lugarDeTrabajoP=$_POST['lugarDeTrabajoP'];}
+					if (empty($_POST['tipoTrabajoP'])) {	$tipoTrabajoP="";}else{ 	$tipoTrabajoP=$_POST['tipoTrabajoP'];}
+			}else{ $profesionP="";
+				$lugarDeTrabajoP="";
+				$tipoTrabajoP="";}
+				}
 
-$Sql2="insert into padre (nombreP,edadP,maxEscolaridadP,trabajaP,profesionP,lugarDeTrabajoP,tipoTrabajoP,domicilioP,telefonoP,noControl) values(
-				'".$_POST['nombreP']."',
-				'".$_POST['edadP']."',
-				'".$_POST['gradoP']."',
-				'".$_POST['trabajaP']."',
-				'".$proP."',
-				'".$luP."',
-				'".$tiP."',
-				'".$_POST['domicilioP']."',
-				'".$_POST['telefonoP']."',
-				'".$_SESSION['noControl']."')";
+	if (empty($_POST['domicilioP'])) {		$domicilioP="";}else{ 	$domicilioP=$_POST['domicilioP'];}
+	if (empty($_POST['telefonoP'])) {		$telefonoP=0;}else{ 	$telefonoP=$_POST['telefonoP'];}
 
-	if ($mysql->query($Sql2)or die($mysql-> error)) {
-			$p=1;
-		}	
+
+		$Sql='update padre set nombreP="'.$nombreP.'",edadP='.$edadP.',maxEscolaridadP="'.$maxEscolaridadP.'",trabajaP="'.$trabajaP.'",profesionP="'.$profesionP.'",lugarDeTrabajoP="'.$lugarDeTrabajoP.'",tipoTrabajoP="'.$tipoTrabajoP.'",domicilioP="'.$domicilioP.'",telefonoP='.$telefonoP.' where noControl='.$_SESSION['noControl'];
+
+
+
+
+		$mysql->query($Sql)or die($mysql-> error);
+			
 }  
 
 if ($_SESSION['madre']=='vive') {
+	
+	$nombreM=""; $edadM=""; $maxEscolaridadM=""; $trabajaM=""; $profesionM=""; $lugarDeTrabajoM=""; $tipoTrabajoM=""; $domicilioM=""; $telefonoM=""; 
 
-$proM='';$luM='';$tiM='';
+	if (empty($_POST['nombreM'])) {			$nombreM="";}else{ 		$nombreM=$_POST['nombreM'];}
+	if (empty($_POST['edadM'])) {			$edadM="";}else{ 		$edadM=$_POST['edadM'];}
+	if (empty($_POST['maxEscolaridadM'])) {	$maxEscolaridadM="";}else{$maxEscolaridadM=$_POST['maxEscolaridadM'];}
+	if (empty($_POST['trabajaM'])) {		$trabajaM="";}else{ 	$trabajaM=$_POST['trabajaM'];     
+			if ($trabajaM=='si') {
+					if (empty($_POST['profesionM'])) {		$profesionM="";}else{ 	$profesionM=$_POST['profesionM'];}
+					if (empty($_POST['lugarDeTrabajoM'])){	$lugarDeTrabajoM="";}else{$lugarDeTrabajoM=$_POST['lugarDeTrabajoM'];}
+					if (empty($_POST['tipoTrabajoM'])) {	$tipoTrabajoM="";}else{ 	$tipoTrabajoM=$_POST['tipoTrabajoM'];}
+			}else{ $profesionM="";
+				$lugarDeTrabajoM="";
+				$tipoTrabajoM="";}
+				}
 
-if ($_POST['trabajaM']='no') {
-	$proM='';$luM='';$tiM='';	
+	if (empty($_POST['domicilioM'])) {		$domicilioM="";}else{ 	$domicilioM=$_POST['domicilioM'];}
+	if (empty($_POST['telefonoM'])) {		$telefonoM=0;}else{ 	$telefonoM=$_POST['telefonoM'];}
+
+	$Sql2='update madre set nombreM="'.$nombreM.'",edadM='.$edadM.',maxEscolaridadM="'.$maxEscolaridadM.'",trabajaM="'.$trabajaM.'",profesionM="'.$profesionM.'",lugarDeTrabajoM="'.$lugarDeTrabajoM.'",tipoTrabajoM="'.$tipoTrabajoM.'",domicilioM="'.$domicilioM.'",telefonoM='.$telefonoM.' where noControl='.$_SESSION['noControl'];
+
+		$mysql->query($Sql2)or die($mysql-> error);
+					echo '<script type="text/javascript">  alert("Se modifico correctamente"); window.location.href="Mfamilia.php";</script>';
+}
 }else{
-$proM=$_POST['profesionM'];
-$luM=$_POST['lugarDeTrabajoM'];
-$tiM=$_POST['tipoTrabajoM'];
+	echo '<script type="text/javascript"> alert("modifique el estado de padre y madre en el primer formulario ");</script>';
 }
-
-	$Sql="insert into madre (nombreM,edadM,maxEscolaridadM,trabajaM,profesionM,lugarDeTrabajoM,tipoTrabajoM,domicilioM,telefonoM,noControl) values(
-				'".$_POST['nombreM']."',
-				'".$_POST['edadM']."',
-				'".$_POST['gradoM']."',
-				'".$_POST['trabajaM']."',
-				'".$proM."',
-				'".$luM."',
-				'".$tiM."',
-				'".$_POST['domicilioM']."',
-				'".$_POST['telefonoM']."',
-				'".$_SESSION['noControl']."')";
-
-		if ($mysql->query($Sql)or die($mysql-> error)) {
-			$m=1;
-		}
-}
-}
-
-
-if ($_SESSION['nHermanos']>0) {
-for ($i=1; $i <=$_SESSION['nHermanos']  ; $i++) {
-
-$nombre=$_POST['nombre'.$i];
-$fechaNacimiento=$_POST['fechaNacimiento'.$i];
-$sexo=$_POST['sexo'.$i];
-$estudios=$_POST['estudios'.$i];
-$comoRelacion=$_POST['comoRelacion'.$i];
-$actitudCon=$_POST['actitudCon'.$i];
-
-		$Sql3="insert into hermanos(nombre,fechaNacimiento,sexo,estudios,comoRelacion,actitudCon,noControl) values(
-			'".$nombre."',
-			'".$fechaNacimiento."',
-			'".$sexo."',
-			'".$estudios."',
-			'".$comoRelacion."',
-			'".$actitudCon."',
-			'".$_SESSION['noControl']."')";
-
-		if ($mysql->query($Sql3)or die($mysql-> error)) {
-					
-			$h=1;
-
-		}	
-
- } 	
-}
-
-if ($p=1||$m=1||$h=1) {
-	echo '<script type="text/javascript"> window.location.href="areaFamiliar.php";</script>';
-}else{
-	echo '<script type="text/javascript"> alert("No agrego")'; 
-	}
 ?>

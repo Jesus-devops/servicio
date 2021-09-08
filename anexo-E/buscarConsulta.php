@@ -1,7 +1,7 @@
 <?php
 	$servername = "localhost";
     $username = "root";
-  	$password = "1234";
+  	$password = "";
   	$dbname = "alumno";
  
 	$conn = new mysqli($servername, $username, $password, $dbname);
@@ -12,7 +12,7 @@
     $salida = "";
     $totalA=0;
 
-    $query = "SELECT count(noControl) cant FROM anexoe  where creditosAcumulados>182 ";
+    $query = "SELECT count(noControl) cant FROM anexoe  where estado='activo' and  creditosAcumulados>182 ";
     $resultado = $conn->query($query);
     $salida.="<label>alumnos registrados con mas del 70% de creditos acumulados: </label>";
     if ($resultado->num_rows>0) {
@@ -24,7 +24,7 @@
     	$salida.="<br>NO HAY DATOS :(<br>";
     }
 
-$query2 = "SELECT count(noControl) cant, servicioSocial from anexoe where creditosAcumulados>182 group by servicioSocial";
+$query2 = "SELECT count(noControl) cant, servicioSocial from anexoe where  estado='activo' and creditosAcumulados>182 group by servicioSocial";
     $resultado2 = $conn->query($query2);
 
 if ($resultado2->num_rows>0) {
@@ -51,7 +51,7 @@ if ($resultado2->num_rows>0) {
 
 
 
-$query3 = "SELECT count(noControl) cant, residenciasPro from anexoe where creditosAcumulados>182  group by residenciasPro";
+$query3 = "SELECT count(noControl) cant, residenciasPro from anexoe where  estado='activo' and creditosAcumulados>182  group by residenciasPro";
     $resultado3 = $conn->query($query3);
 
 if ($resultado3->num_rows>0) {
@@ -77,7 +77,7 @@ if ($resultado3->num_rows>0) {
 
 
 
-$query5 = "SELECT count(noControl) cant, adeudaMaterias from anexoe where creditosAcumulados>182  group by adeudaMaterias ";
+$query5 = "SELECT count(noControl) cant, adeudaMaterias from anexoe where  estado='activo' and creditosAcumulados>182  group by adeudaMaterias ";
     $resultado5 = $conn->query($query5);
 
 if ($resultado5->num_rows>0) {
@@ -103,7 +103,7 @@ if ($resultado5->num_rows>0) {
 
 
 
-$query4 = "SELECT count(noControl) cant, titulacion from anexoe where creditosAcumulados>182  group by titulacion";
+$query4 = "SELECT count(noControl) cant, titulacion from anexoe where estado='activo' and  creditosAcumulados>182  group by titulacion";
     $resultado4 = $conn->query($query4);
 
 if ($resultado4->num_rows>0) {
@@ -128,16 +128,16 @@ if ($resultado4->num_rows>0) {
 
 
 
-$query6 = "SELECT count(n1) cant, n1 from anexoe where creditosAcumulados>182  group by n1";
-$query7 = "SELECT count(n2) cant, n2 from anexoe where creditosAcumulados>182  group by n2";
-$query8 = "SELECT count(n3) cant, n3 from anexoe where creditosAcumulados>182  group by n3";
-$query9 = "SELECT count(n4) cant, n4 from anexoe where creditosAcumulados>182  group by n4";
-$query10 = "SELECT count(n5) cant, n5 from anexoe where creditosAcumulados>182  group by n5";
-$query11 = "SELECT count(n6) cant, n6 from anexoe where creditosAcumulados>182  group by n6";
-$query12 = "SELECT count(n7) cant, n7 from anexoe where creditosAcumulados>182  group by n7";
-$query13 = "SELECT count(n8) cant, n8 from anexoe where creditosAcumulados>182  group by n8";
-$query14 = "SELECT count(n9) cant, n9 from anexoe where creditosAcumulados>182  group by n9";
-$query15 = "SELECT count(n10) cant, n10 from anexoe where creditosAcumulados>182  group by n10";
+$query6 = "SELECT count(n1) cant, n1 from anexoe where estado='activo' and  creditosAcumulados>182  group by n1";
+$query7 = "SELECT count(n2) cant, n2 from anexoe where estado='activo' and  creditosAcumulados>182  group by n2";
+$query8 = "SELECT count(n3) cant, n3 from anexoe where estado='activo' and  creditosAcumulados>182  group by n3";
+$query9 = "SELECT count(n4) cant, n4 from anexoe where estado='activo' and  creditosAcumulados>182  group by n4";
+$query10 = "SELECT count(n5) cant, n5 from anexoe where estado='activo' and  creditosAcumulados>182  group by n5";
+$query11 = "SELECT count(n6) cant, n6 from anexoe where estado='activo' and  creditosAcumulados>182  group by n6";
+$query12 = "SELECT count(n7) cant, n7 from anexoe where estado='activo' and  creditosAcumulados>182  group by n7";
+$query13 = "SELECT count(n8) cant, n8 from anexoe where estado='activo' and  creditosAcumulados>182  group by n8";
+$query14 = "SELECT count(n9) cant, n9 from anexoe where estado='activo' and  creditosAcumulados>182  group by n9";
+$query15 = "SELECT count(n10) cant, n10 from anexoe where estado='activo' and  creditosAcumulados>182  group by n10";
 
     $resultado6 = $conn->query($query6);
     $resultado7 = $conn->query($query7);
@@ -272,13 +272,13 @@ $query15 = "SELECT count(n10) cant, n10 from anexoe where creditosAcumulados>182
 
 
 
-$query16 = "SELECT count(C) cant from anexoe where creditosAcumulados>182 and C>0";
-$query17 = "SELECT count(CIT) cant from anexoe where creditosAcumulados>182 and CIT>0";
-$query18 = "SELECT count(PDS) cant from anexoe where creditosAcumulados>182 and PDS>0";
-$query19 = "SELECT count(PD) cant from anexoe where creditosAcumulados>182 and PD>0";
-$query20 = "SELECT count(AE) cant from anexoe where creditosAcumulados>182 and AE>0";
-$query21 = "SELECT count(CCB) cant from anexoe where creditosAcumulados>182 and CCB>0";
-$query22 = "SELECT count(FE) cant from anexoe where creditosAcumulados>182 and FE>0";
+$query16 = "SELECT count(C) cant from anexoe where estado='activo' and  creditosAcumulados>182 and C>0";
+$query17 = "SELECT count(CIT) cant from anexoe where estado='activo' and  creditosAcumulados>182 and CIT>0";
+$query18 = "SELECT count(PDS) cant from anexoe where estado='activo' and  creditosAcumulados>182 and PDS>0";
+$query19 = "SELECT count(PD) cant from anexoe where estado='activo' and  creditosAcumulados>182 and PD>0";
+$query20 = "SELECT count(AE) cant from anexoe where estado='activo' and  creditosAcumulados>182 and AE>0";
+$query21 = "SELECT count(CCB) cant from anexoe where estado='activo' and  creditosAcumulados>182 and CCB>0";
+$query22 = "SELECT count(FE) cant from anexoe where estado='activo' and  creditosAcumulados>182 and FE>0";
 
     $resultado16 = $conn->query($query16);
     $resultado17 = $conn->query($query17);

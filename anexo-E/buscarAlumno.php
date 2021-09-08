@@ -1,7 +1,7 @@
 <?php
 	$servername = "localhost";
     $username = "root";
-  	$password = "1234";
+  	$password = "";
   	$dbname = "alumno";
  
 	$conn = new mysqli($servername, $username, $password, $dbname);
@@ -19,7 +19,7 @@ if (isset($_SESSION['grupo'])&&isset($_SESSION['semestre'])&&
             $_SESSION['grupo']!=''&& $_SESSION['semestre']>0) {
 
 
-    $query2 = "SELECT count(ae.noControl) cant, servicioSocial FROM anexoe ae join alumno a on a.noControl=ae.noControl WHERE creditosAcumulados>182 and a.semestre='".$_SESSION['semestre']."' and a.grupo='".$_SESSION['grupo'].' '.$_SESSION['turno']."' group by servicioSocial";
+    $query2 = "SELECT count(ae.noControl) cant, servicioSocial FROM anexoe ae join alumno a on a.noControl=ae.noControl WHERE a.estado='activo' and creditosAcumulados>182 and a.semestre='".$_SESSION['semestre']."' and a.grupo='".$_SESSION['grupo'].' '.$_SESSION['turno']."' group by servicioSocial";
 
     $resultado2 = $conn->query($query2);
     if ($resultado2->num_rows>0) {
@@ -43,7 +43,7 @@ if (isset($_SESSION['grupo'])&&isset($_SESSION['semestre'])&&
 
 
 
-    $query3 = "SELECT count(ae.noControl) cant, residenciasPro FROM anexoe ae join alumno a on a.noControl=ae.noControl WHERE creditosAcumulados>182 and a.semestre='".$_SESSION['semestre']."' and a.grupo='".$_SESSION['grupo'].' '.$_SESSION['turno']."' group by residenciasPro";
+    $query3 = "SELECT count(ae.noControl) cant, residenciasPro FROM anexoe ae join alumno a on a.noControl=ae.noControl WHERE a.estado='activo' and  creditosAcumulados>182 and a.semestre='".$_SESSION['semestre']."' and a.grupo='".$_SESSION['grupo'].' '.$_SESSION['turno']."' group by residenciasPro";
     
     $resultado3 = $conn->query($query3);
     if ($resultado3->num_rows>0) {
@@ -65,7 +65,7 @@ if (isset($_SESSION['grupo'])&&isset($_SESSION['semestre'])&&
 
 
 
-    $query5 = "SELECT count(ae.noControl) cant, adeudaMaterias FROM anexoe ae join alumno a on a.noControl=ae.noControl WHERE creditosAcumulados>182 and a.semestre='".$_SESSION['semestre']."' and a.grupo='".$_SESSION['grupo'].' '.$_SESSION['turno']."' group by adeudaMaterias desc";
+    $query5 = "SELECT count(ae.noControl) cant, adeudaMaterias FROM anexoe ae join alumno a on a.noControl=ae.noControl WHERE a.estado='activo' and  creditosAcumulados>182 and a.semestre='".$_SESSION['semestre']."' and a.grupo='".$_SESSION['grupo'].' '.$_SESSION['turno']."' group by adeudaMaterias desc";
     
     $resultado5 = $conn->query($query5);
     if ($resultado5->num_rows>0) {
@@ -87,7 +87,7 @@ if (isset($_SESSION['grupo'])&&isset($_SESSION['semestre'])&&
 
 
 
-    $query4 = "SELECT count(ae.noControl) cant, titulacion FROM anexoe ae join alumno a on a.noControl=ae.noControl WHERE creditosAcumulados>182 and a.semestre='".$_SESSION['semestre']."' and a.grupo='".$_SESSION['grupo'].' '.$_SESSION['turno']."' group by titulacion";
+    $query4 = "SELECT count(ae.noControl) cant, titulacion FROM anexoe ae join alumno a on a.noControl=ae.noControl WHERE a.estado='activo' and  creditosAcumulados>182 and a.semestre='".$_SESSION['semestre']."' and a.grupo='".$_SESSION['grupo'].' '.$_SESSION['turno']."' group by titulacion";
    
     $resultado4 = $conn->query($query4);
     if ($resultado4->num_rows>0) {
@@ -111,7 +111,7 @@ if (isset($_SESSION['grupo'])&&isset($_SESSION['semestre'])&&
 
 
 
-$query = "SELECT * FROM anexoe ae join alumno a on a.noControl=ae.noControl WHERE creditosAcumulados>182 and a.semestre='".$_SESSION['semestre']."' and a.grupo='".$_SESSION['grupo'].' '.$_SESSION['turno']."' ORDER By a.noControl";
+$query = "SELECT * FROM anexoe ae join alumno a on a.noControl=ae.noControl WHERE  a.estado='activo' and creditosAcumulados>182 and a.semestre='".$_SESSION['semestre']."' and a.grupo='".$_SESSION['grupo'].' '.$_SESSION['turno']."' ORDER By a.noControl";
 
 if (isset($_POST['consulta'])) {
     $q = $conn->real_escape_string($_POST['consulta']);
@@ -120,16 +120,16 @@ if (isset($_POST['consulta'])) {
         $_POST['consulta']=='titulacion'||
         $_POST['consulta']=='tOtrosC'||
         $_POST['consulta']=='tIngles') {
-        $query = "SELECT * FROM anexoe ae join alumno a on a.noControl=ae.noControl WHERE  creditosAcumulados>182 and a.semestre='".$_SESSION['semestre']."' and a.grupo='".$_SESSION['grupo'].' '.$_SESSION['turno']."' ORDER By ".$_POST['consulta'];
+        $query = "SELECT * FROM anexoe ae join alumno a on a.noControl=ae.noControl WHERE a.estado='activo' and   creditosAcumulados>182 and a.semestre='".$_SESSION['semestre']."' and a.grupo='".$_SESSION['grupo'].' '.$_SESSION['turno']."' ORDER By ".$_POST['consulta'];
 
     }else if ($_POST['consulta']=='adeudaMaterias') {
-        $query = "SELECT * FROM anexoe ae join alumno a on a.noControl=ae.noControl WHERE creditosAcumulados>182 and a.semestre='".$_SESSION['semestre']."' and a.grupo='".$_SESSION['grupo'].' '.$_SESSION['turno']."' ORDER By ".$_POST['consulta']." desc";
+        $query = "SELECT * FROM anexoe ae join alumno a on a.noControl=ae.noControl WHERE a.estado='activo' and  creditosAcumulados>182 and a.semestre='".$_SESSION['semestre']."' and a.grupo='".$_SESSION['grupo'].' '.$_SESSION['turno']."' ORDER By ".$_POST['consulta']." desc";
 
     } else{
         $_SESSION['grupo']='';
         $_SESSION['semestre']=0;
             
-        $query = "SELECT * FROM anexoe ae join alumno a on a.noControl=ae.noControl WHERE  creditosAcumulados>182 and a.noControl LIKE '$q%' ORDER By a.noControl limit 3";
+        $query = "SELECT * FROM anexoe ae join alumno a on a.noControl=ae.noControl WHERE a.estado='activo' and   creditosAcumulados>182 and a.noControl LIKE '$q%' ORDER By a.noControl limit 3";
     }
 }
 
@@ -154,7 +154,7 @@ if ($resultado->num_rows>0) {
                 <td id='sb'>total creditos</td>
                 <td id='sb' class='cel' style='background: black;'>Celulares</td>
                 <td id='sb'class='campomodi'>mod.</td>
-                <td id='sb'>.</td>
+                <td id='sb'></td>
     		</tr>
         </thead><tbody>";
 
@@ -255,9 +255,10 @@ while ($fila2 = $resultadoT->fetch_assoc()) {
             <input type='hidden' name='noControl' required value='".$fila['noControl']."' >";
 
             $salida.="
-            <input  name='accion' value='ELIMINAR' id='aceptar' class='btn'type='submit'>
-
-        </form>
+            <input  name='accion' value='ELIMINAR' id='aceptar' class='btn'type='submit' style=' background-color: firebrick;
+    color: white;    border-width: medium;    -webkit-text-stroke: thin;'>
+           
+        </form> 
         </td>
     			</tr>";
     	}

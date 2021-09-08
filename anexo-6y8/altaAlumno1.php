@@ -1,14 +1,6 @@
 <?php
+include "../conexion.php";
 
-$servername = "localhost";
-    $username = "root";
-  	$password = "1234";
-  	$dbname = "alumno";
- 
-	$mysql = new mysqli($servername, $username, $password, $dbname);
-      if($mysql->connect_error){
-        die("Conexión fallida: ".$conn->connect_error);
-      }
 
 
 	$noC=0;
@@ -65,7 +57,7 @@ if(!isset($_POST['noControl'])){
 		}else{
 		
 
-	$Sql="insert into alumno (noControl,foto,carrera,semestre,grupo,turno,apellidoP,apellidoM,nombres,fecha,sexo,edad,email,CP,escolaridad,nombreInstitucion,trabaja,padre,madre,becado,idAsesor) values(
+	$Sql="insert into alumno (noControl,foto,carrera,semestre,grupo,turno,apellidoP,apellidoM,nombres,fecha,sexo,edad,email,CP,escolaridad,nombreInstitucion,trabaja,padre,madre,nHermanos,becado,idAsesor) values(
 				".$_POST['noControl'].",
 				'".$foto."',
 				'".$_POST['carrera']."',
@@ -85,6 +77,7 @@ if(!isset($_POST['noControl'])){
 				'".$_POST['trabaja']."',
 				'".$_POST['padre']."',
 				'".$_POST['madre']."',
+				'".$_POST['nHermanos']."',
 				'".$_POST['becado']."',
 				0)";
 

@@ -25,14 +25,21 @@ include "../conexion.php";
 
 	<center>
 <div id="contenedor">
-<img src="../logo.png" id="logo"></a>
-<ul class="nav nav" style="margin: 5px; display: block;">
+<img src="../logo.png" id="logo"></a><br>
+<ul class="nav nav" style="margin: 5px; display: inline-flex;">
   	<li class="nav-item">
    	 	<a class="btn btn-primary" href="../index.php" >Página principal</a>
   	</li>
+
+<?php if (isset($_SESSION['noControl'])) { ?>
+  	<li class="nav-item">
+   	 	<a class="btn btn-primary" href="./cerrar.php" >Salir</a>
+  	</li>
+<?php }	 ?>
+
 </ul>		
 <header id="menuA">
-	<br><br>
+	<br>
 <ul class="nav nav-pills" style="margin: 5px; display: block;">
   	<li class="nav-item">
    	 	<a class="nav-link" href="Mindex.php" id="menuIndex">Alumno parte 1</a>
@@ -43,15 +50,7 @@ include "../conexion.php";
   	<li class="nav-item">
    	 	<a class="nav-link" href="Mfamilia.php" id="menuIndex">Familia</a>
   	</li>
-  	<li class="nav-item">
-   	 	<a class="nav-link" href="Mareafamiliar.php" id="menuIndex">Area Familiar y Area Social</a>
-  	</li>
- 	<li class="nav-item">
- 		<a class="nav-link" href="Mpsicopedagogica.php" id="menuIndex">Area Psicopedagogica</a>
-	</li>
-  	<li class="nav-item">
-   	 	<a class="nav-link" href="Mestadofisiologico.php" id="menuIndex">Estado Fisiologico</a>
-  	</li>
+  	
 </ul>
 	</header> 
 

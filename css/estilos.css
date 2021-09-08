@@ -292,10 +292,8 @@ width: 25%;
   flex: unset;
 }
 .progress{
-      width: 66%;
+      width: 90%;
       background-color: #233d7b;
-      max-width: 822px;
-    min-width: 360px;
 }
 .progress-bar{
     background-color: #e5e53b;
@@ -429,7 +427,9 @@ g{
  
 }
 
-
+.modificarinfo .input-group {
+  margin-bottom: 8px !important;
+}
 
 
 
