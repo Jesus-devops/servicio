@@ -94,8 +94,7 @@ include "../conexion.php";
 		<option value="M">M</option>
 	</select>
 <span class="input-group-text" style="margin-left: 15px;">Turno</span>
-	<select name="turno"  required="true"> 
-		<option selected disabled >-----</option>
+	<select name="turno"> 
 		<option value=""></option>
 		<option value="Bis">Bis</option>
 	</select>

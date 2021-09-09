@@ -66,11 +66,11 @@ if ($_SESSION['padre']=='vive') {
 	?>
 			<h2>PADRE</h2>
 <div class="input-group">
-  <span class="input-group-text">Nombre completo</span>
+  <span class="input-group-text">Nombre completo*</span>
   <input type="text" class="form-control" required name="nombreP" placeholder="Nombre" id="estudios">
 </div>
 <div class="input-group">
-  <span class="input-group-text"> Máximo grado de escolaridad de</span>
+  <span class="input-group-text"> Máximo grado de escolaridad*</span>
 	<select name="gradoP" required>
 		<option selected disabled value="">-----</option>
 		<option value="primaria">Primaria</option>
@@ -83,10 +83,10 @@ if ($_SESSION['padre']=='vive') {
 	</select>
 </div>
 <div class="input-group">
-  <span class="input-group-text">Edad</span>
+  <span class="input-group-text">Edad*</span>
   <input type="number" class="form-control" required name="edadP" placeholder="N" id="n2d">
 
-  <span class="input-group-text" style="margin-left: 10px;">Trabaja</span>
+  <span class="input-group-text" style="margin-left: 10px;">Trabaja*</span>
 	<select name="trabajaP" required>
 		<option selected disabled value="">-----</option>
 		<option value="si">Si</option>
@@ -94,23 +94,23 @@ if ($_SESSION['padre']=='vive') {
 	</select>
 </div>	
 <div class="input-group">
-  <span class="input-group-text">Profesión</span>
+  <span class="input-group-text">Profesión*</span>
   <input type="text" class="form-control"  name="profesionP" placeholder="Profesión" id="estudios">
 </div>	
 <div class="input-group">
-  <span class="input-group-text">Tipo de trabajo</span>
+  <span class="input-group-text">Tipo de trabajo*</span>
   <input type="text" class="form-control"  name="tipoTrabajoP" placeholder="Tipo" id="estudios">
 </div>	
 <div class="input-group">
-  <span class="input-group-text" > Nombre del lugar de trabajo</span>
+  <span class="input-group-text" > Nombre del lugar de trabajo*</span>
   <input type="text" class="form-control"  name="lugarDeTrabajoP" placeholder="lugar de trabajo" id="estudios">
 </div>	
 <div class="input-group">
-  <span class="input-group-text">Domicilio</span>
+  <span class="input-group-text">Domicilio*</span>
   <input type="text" class="form-control" required name="domicilioP" placeholder="Domicilio del padre" id="estudios">
 </div>	
 <div class="input-group">
-  <span class="input-group-text">Teléfono</span>
+  <span class="input-group-text">Teléfono*</span>
   <input type="text" class="form-control" required name="telefonoP" placeholder="Teléfono del padre" id="tel">
 </div>	
 
@@ -120,11 +120,11 @@ if ($_SESSION['madre']=='vive') {
 	?>
 			<h2>MADRE</h2>
 <div class="input-group">
-  <span class="input-group-text">Nombre completo</span>
+  <span class="input-group-text">Nombre completo*</span>
   <input type="text" class="form-control" required name="nombreM" placeholder="Nombre" id="estudios">
 </div>	
 <div class="input-group">
-  <span class="input-group-text"> Máximo grado de escolaridad de</span>
+  <span class="input-group-text"> Máximo grado de escolaridad*</span>
 	<select name="gradoM" required>
 		<option selected disabled value="">-----</option>
 		<option value="primaria">Primaria</option>
@@ -137,10 +137,10 @@ if ($_SESSION['madre']=='vive') {
 	</select>
 </div>
 <div class="input-group">
-  <span class="input-group-text">Edad</span>
+  <span class="input-group-text">Edad*</span>
   <input type="number" class="form-control" required name="edadM" placeholder="N" id="n2d">
 
-  <span class="input-group-text" style="margin-left: 10px;">Trabaja</span>
+  <span class="input-group-text" style="margin-left: 10px;">Trabaja*</span>
 	<select name="trabajaM" required>
 		<option selected disabled value="">-----</option>
 		<option value="si">Si</option>
@@ -148,23 +148,23 @@ if ($_SESSION['madre']=='vive') {
 	</select>
 </div>	
 <div class="input-group">
-  <span class="input-group-text">Profesión</span>
+  <span class="input-group-text">Profesión*</span>
   <input type="text" class="form-control" name="profesionM" placeholder="Profesión" id="estudios">
 </div>	
 <div class="input-group">
-  <span class="input-group-text">Tipo de trabajo</span>
+  <span class="input-group-text">Tipo de trabajo*</span>
   <input type="text" class="form-control"  name="tipoTrabajoM" placeholder="Tipo" id="estudios">
 </div>
 <div class="input-group">
-  <span class="input-group-text" > Nombre del lugar de trabajo</span>
+  <span class="input-group-text" > Nombre del lugar de trabajo*</span>
   <input type="text" class="form-control" name="lugarDeTrabajoM" placeholder="lugar de trabajo" id="estudios">
 </div>	
 <div class="input-group">
-  <span class="input-group-text">Domicilio</span>
+  <span class="input-group-text">Domicilio*</span>
   <input type="text" class="form-control" required name="domicilioM" placeholder="Domicilio de la madre" id="estudios">
 </div>	
 <div class="input-group">
-  <span class="input-group-text" id="semestre">Teléfono</span>
+  <span class="input-group-text" id="semestre">Teléfono*</span>
   <input type="text" class="form-control" required name="telefonoM" placeholder="Teléfono de la madre" id="tel">
 </div>		
 <?php 	
@@ -183,17 +183,17 @@ for ($i=1; $i<= $_SESSION['nHermanos'] ; $i++) {
 echo' 
 			<h4>Hermano '.$i.'</h4>
 			<div class="input-group">
-			<span class="input-group-text">Nombre</span>
+			<span class="input-group-text">Nombre*</span>
 				<input type="text" name="nombre'.$i.'" class="form-control" placeholder="Nombre" required  id="estudios">
 			</div>
 
 			<div class="input-group">
-			<span class="input-group-text">Fecha de Nacimiento</span>
+			<span class="input-group-text">Fecha de Nacimiento*</span>
 				<input type="date" name="fechaNacimiento'.$i.'" class="form-control" id="fecha">
 			</div>
 			
 			<div class="input-group">
-			<span class="input-group-text">Sexo</span>
+			<span class="input-group-text">Sex*o</span>
 				<select name="sexo'.$i.'" >
 				<option selected disabled value="">-----</option>
 					<option value="H">H</option>
@@ -202,7 +202,7 @@ echo'
 			</div>
 			
 			<div class="input-group">
-			<span class="input-group-text">Estudios</span>
+			<span class="input-group-text">Estudios*</span>
 			<select name="estudios'.$i.'" required>
 		<option selected disabled value="">-----</option>
 		<option value="primaria">Primaria</option>
@@ -216,7 +216,7 @@ echo'
 			</div>
 			
 			<div class="input-group">
-			<span class="input-group-text">Relacion</span>
+			<span class="input-group-text">Relacion*</span>
 			<select name="comoRelacion'.$i.'" >
 				<option value="">-----</option>
 				<option value="buena">Bien</option>
@@ -227,7 +227,7 @@ echo'
 			</div>
 			
 			<div class="input-group">
-			<span class="input-group-text">Actitud</span>
+			<span class="input-group-text">Actitud*</span>
 				<input type="text" name="actitudCon'.$i.'" class="form-control"  placeholder="Actitud"  id="txtlargo">
 			</div>
 			

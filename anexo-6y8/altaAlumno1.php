@@ -1,12 +1,8 @@
 <?php
 include "../conexion.php";
 
-
-
 	$noC=0;
-if(!isset($_POST['noControl'])){
-		header("Location: index.php");
-}else{
+
 		$allowedExts = array("jpeg", "jpg", "png","xbm","xpm","wbmp","tiff","psd","bmp");
 			$temp = explode(".", $_FILES["file"]["name"]);
 			$extension = end($temp);
@@ -107,9 +103,9 @@ if(!isset($_POST['noControl'])){
 		}
 				}
 			}
-		}echo "<h1>error en tipo de imagen<h1>";
-				echo '<script type="text/javascript"> alert("Error en tipo de imagen o tamaño de la imagen"); window.location.href="index.php";</script>';
-	}
+		}else{
+				echo '<script type="text/javascript"> alert("El formato de la imagen no es correcto"); window.location.href="index.php";</script>';
+				}
 
 $mysql->close();
 ?>

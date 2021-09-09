@@ -51,7 +51,7 @@ $re=$mysql->query("select noControl from areafamiliarysocial where noControl=".$
          } ?>
 
 <div class="input-group">
-  <span class="input-group-text">¿Cómo es la relación con tu familia?</span>
+  <span class="input-group-text">¿Cómo es la relación con tu familia?*</span>
   <select name="relacionFamilia" required>
 		<option selected disabled value="">-----</option>
 		<option value="buena">Buena</option>
@@ -62,7 +62,7 @@ $re=$mysql->query("select noControl from areafamiliarysocial where noControl=".$
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">¿Existen dificultades?</span>
+  <span class="input-group-text">¿Existen dificultades?*</span>
   <select name="dificultades" required>
 		<option selected disabled value="">-----</option>
 		<option value="si">Si</option>
@@ -71,13 +71,13 @@ $re=$mysql->query("select noControl from areafamiliarysocial where noControl=".$
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">¿De qué tipo?</span>
+  <span class="input-group-text">¿De qué tipo?*</span>
   <input type="text" class="form-control" placeholder="Tipo"  name="tipoDificultad" id="txtmedio">
 </div>
 
 
 <div class="input-group">
-  <span class="input-group-text">¿Qué actitudes tienes con tu familia?</span>
+  <span class="input-group-text">¿Qué actitudes tienes con tu familia?*</span>
   <input type="text" class="form-control" placeholder="Actitud"  required name="actitudFamilia" id="txtlargo">
 </div>
 
@@ -87,7 +87,7 @@ if ($_SESSION['padre']=='vive') {
  ?>
 
 <div class="input-group">
-  <span class="input-group-text">¿Cómo te relacionas con tu Padre?</span>
+  <span class="input-group-text">¿Cómo te relacionas con tu Padre?*</span>
   <select name="relacionP" >
 		<option selected disabled value="">-----</option>
 		<option value="buena">Bien</option>
@@ -98,7 +98,7 @@ if ($_SESSION['padre']=='vive') {
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">¿Qué actitud tienes hacia tu Padre?</span>
+  <span class="input-group-text">¿Qué actitud tienes hacia tu Padre?*</span>
   <input type="text" class="form-control" placeholder="Actitud"   name="actitudP" id="txtlargo">
 </div>
 
@@ -114,7 +114,7 @@ if ($_SESSION['madre']=='vive') {
  ?>
 
 <div class="input-group">
-  <span class="input-group-text">¿Cómo te relacionas con tu Madre?</span>
+  <span class="input-group-text">¿Cómo te relacionas con tu Madre?*</span>
   <select name="relacionM" >
 		<option selected disabled value="">-----</option>
 		<option value="buena">Bien</option>
@@ -125,7 +125,7 @@ if ($_SESSION['madre']=='vive') {
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">¿Qué actitud tienes hacia tu Madre?</span>
+  <span class="input-group-text">¿Qué actitud tienes hacia tu Madre?*</span>
   <input type="text" class="form-control" placeholder="Actitud"   name="actitudM" id="txtlargo">
 </div>
 <?php 
@@ -139,7 +139,7 @@ if ($_SESSION['madre']=='vive') {
 ?>
 
 <div class="input-group">
-  <span class="input-group-text">¿Con quién te sientes más ligado afectivamente?</span>
+  <span class="input-group-text">¿Con quién te sientes más ligado afectivamente?*</span>
 
 <?php 
 
@@ -225,17 +225,17 @@ else if ($_SESSION['padre']=='vive'&&$_SESSION['madre']=='vive'&&$_SESSION['nHer
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">Especifique porque</span>
+  <span class="input-group-text">Especifique porque*</span>
   <input type="text" class="form-control" placeholder="Especifique"  required name="ligadoPorque" id="txtmedio">
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">¿Quién se ocupa  más directamente de tu educación?</span>
+  <span class="input-group-text">¿Quién se ocupa  más directamente de tu educación?*</span>
   <input type="text" class="form-control"  required name="tuEducacion" id="txtcorto">
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">¿Quién ha influido más en tu decisión para estudiar esta carrera?</span>
+  <span class="input-group-text">¿Quién ha influido más en tu decisión para estudiar esta carrera?*</span>
   <input type="text" class="form-control"  required name="decision" id="txtcorto">
 </div>
 
@@ -252,7 +252,7 @@ else if ($_SESSION['padre']=='vive'&&$_SESSION['madre']=='vive'&&$_SESSION['nHer
 			}?>
 
 <div class="input-group">
-  <span class="input-group-text">¿Cómo es tu relación con tus compañeros?</span>
+  <span class="input-group-text">¿Cómo es tu relación con tus compañeros?*</span>
   <select name="companerosR" required>
 		<option selected disabled value="">-----</option>
 		<option value="buena">Buena</option>
@@ -262,12 +262,12 @@ else if ($_SESSION['padre']=='vive'&&$_SESSION['madre']=='vive'&&$_SESSION['nHer
 </div>
 
 <div class="input-group">
-  <span class="input-group-text" >¿Por qué?</span>
+  <span class="input-group-text" >¿Por qué?*</span>
   <input type="text" class="form-control" required id="correoIn" placeholder="¿Por qué?" name="companerosPorque" >
 </div>		
 
 <div class="input-group">
-  <span class="input-group-text">¿Cómo es tu relación con tus amigos?</span>
+  <span class="input-group-text">¿Cómo es tu relación con tus amigos?*</span>
   <select name="amigosR" required>
 		<option selected disabled value="">-----</option>
 		<option value="buena">Buena</option>
@@ -278,7 +278,7 @@ else if ($_SESSION['padre']=='vive'&&$_SESSION['madre']=='vive'&&$_SESSION['nHer
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">¿Tienes Pareja?</span>
+  <span class="input-group-text">¿Tienes Pareja?*</span>
   <select name="tienePareja" required>
 		<option selected disabled value="">-----</option>
 		<option value="si">Si</option>
@@ -298,7 +298,7 @@ else if ($_SESSION['padre']=='vive'&&$_SESSION['madre']=='vive'&&$_SESSION['nHer
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">¿Cómo es tu relación con tus profesores?</span>
+  <span class="input-group-text">¿Cómo es tu relación con tus profesores?*</span>
   <select name="profesoresR" required>
 		<option selected disabled value="">-----</option>
 		<option value="buena">Buena</option>
@@ -309,7 +309,7 @@ else if ($_SESSION['padre']=='vive'&&$_SESSION['madre']=='vive'&&$_SESSION['nHer
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">¿Cómo es tu relación con las autoridades académicas?</span>
+  <span class="input-group-text">¿Cómo es tu relación con las autoridades académicas?*</span>
   <select name="autoridadesR" required>
 		<option selected disabled value="">-----</option>
 		<option value="buena">Buena</option>
@@ -321,12 +321,12 @@ else if ($_SESSION['padre']=='vive'&&$_SESSION['madre']=='vive'&&$_SESSION['nHer
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">¿Qué haces en tu tiempo libre?</span>
+  <span class="input-group-text">¿Qué haces en tu tiempo libre?*</span>
   <input type="text" class="form-control" placeholder="Tiempo libre"  name="tiempoLibre" id="correoIn" required>
 </div>			
 
 <div class="input-group">
-  <span class="input-group-text">¿Cuál es tu actividad recreativa?</span>
+  <span class="input-group-text">¿Cuál es tu actividad recreativa?*</span>
   <input type="text" class="form-control" placeholder="Actividad"  name="actividades" id="correoIn" required>
 </div>				
 
