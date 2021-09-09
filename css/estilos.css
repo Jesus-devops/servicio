@@ -18,7 +18,7 @@ header{
   margin: 0;
   }    
 html{
-    min-width: 300px; 
+    min-width: 320px; 
 }
 a{
   color: #000000;
@@ -152,12 +152,10 @@ justify-content: flex-end;
 
 
 .input-group-text {
-    height: 30px;
+    height: auto;
     width: fit-content;
     font-size: 17px;
-    padding: 0px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 0px 5px;
     border-radius: 10px !important;
     border-color: #233d7b;
     flex: unset !important;
@@ -503,7 +501,7 @@ g{
     margin-bottom: 15px;
   }
   .tdtab2 div{
-    width: 250px;
+    width: 256px;
   }
   .tdtab2 {
     width: 245px;

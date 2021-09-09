@@ -134,7 +134,7 @@ session_start();
 	</select>
 </div>
 
-  <span class="input-group-text">OTROS CREDITOS (VALOR DE CADA CREDITO: 0.5, 1, 2 )</span>
+  <span class="input-group-text">OTROS CREDITOS <br> (VALOR DE CADA CREDITO: 0.5, 1, 2 )</span>
 
 
 <div class="input-group" id="rellenar">

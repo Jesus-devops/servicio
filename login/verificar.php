@@ -19,11 +19,13 @@ while ($f=$re->fetch_array()) {
 		}if ($nivel==2) {
 			header("Location: ../anexo-E/buscar.php");
 		}else{
-			echo "No tienes un nivel asignado";
+			echo '<script type="text/javascript">  alert("No tienes un nivel asignado, Comunicate con el adminitrador de la base de datos para que te asingne un nivel"); window.location.href="./index.php";</script>';   unset($_SESSION['admin']); 
+
 		}
 	}else{
 		header("Location: ./index.php?error=datos no validos");
-		echo '<center>Datos No Validos/center>';
+		echo '<center><h1>Datos No Validos/center></h1>';    unset($_SESSION['admin']); 
+
 	}
 	mysqli_free_result($re);
 	$mysql ->close();

@@ -1,7 +1,7 @@
 <?php
 session_start();
 //valida que tipo de usuario desea salir
-if(isset($_SESSION['admin'])){
+if(isset($_SESSION['admin'])||isset($_SESSION['id'])){
     //Elimina la variable del usuario
     unset($_SESSION['admin']); 
     unset($_SESSION['id']); 
