@@ -49,7 +49,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	
 <br>
 <div class="input-group">
-	<span class="input-group-text">¿Tiene alguna preinscripción?</span>
+	<span class="input-group-text">¿Tiene alguna preinscripción?*</span>
 	<select name="prescripcionTiene" required>
 		<option selected disabled value="">-----</option>
 		<option value="no">No</option>
@@ -62,10 +62,10 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	<input type="text" class="form-control" name="prescripcionCual" id="correoIn">
 </div>
 
-	<h4>¿Qué tan seguidos Sufres de alguno de estos padecimientos?</h4>
+	<h4>¿Qué tan seguidos Sufres de alguno de estos padecimientos?*</h4>
 
 <div class="input-group">
-	<span class="input-group-text">Pies o Manos hinchados:</span>
+	<span class="input-group-text">Pies o Manos hinchados:*</span>
 	<select name="manosPiesHinchados" required>
 		<option value="nunca">Nunca</option>
 		<option value="antes">Antes</option>
@@ -75,7 +75,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</select>
 </div>
 <div class="input-group">
-	<span class="input-group-text">Dolor en el vientre:</span>
+	<span class="input-group-text">Dolor en el vientre:*</span>
 	<select name="dolorVientre" required>
 		<option value="nunca">Nunca</option>
 		<option value="antes">Antes</option>
@@ -85,7 +85,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</select>
 </div>
 <div class="input-group">
-	<span class="input-group-text">Dolor de cabeza o vomito:</span>
+	<span class="input-group-text">Dolor de cabeza o vomito:*</span>
 	<select name="dolorCabezaVomito" required>
 		<option value="nunca">Nunca</option>
 		<option value="antes">Antes</option>
@@ -95,7 +95,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</select>
 </div>
 <div class="input-group">
-	<span class="input-group-text">Perdida del Equilibro:</span>
+	<span class="input-group-text">Perdida del Equilibro:*</span>
 	<select name="perdidaEquilibrio" required>
 		<option value="nunca">Nunca</option>
 		<option value="antes">Antes</option>
@@ -105,7 +105,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</select>
 </div>
 <div class="input-group">
-	<span class="input-group-text">Fatiga o Agotamiento:</span>
+	<span class="input-group-text">Fatiga o Agotamiento:*</span>
 	<select name="fatigaAgotamiento" required>
 		<option value="nunca">Nunca</option>
 		<option value="antes">Antes</option>
@@ -115,7 +115,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</select>
 </div>
 <div class="input-group">
-	<span class="input-group-text">Perdida de la Vista u Oído:</span>
+	<span class="input-group-text">Perdida de la Vista u Oído:*</span>
 	<select name="perdidaVistaOido" required>
 		<option value="nunca">Nunca</option>
 		<option value="antes">Antes</option>
@@ -125,7 +125,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</select>
 </div>
 <div class="input-group">
-	<span class="input-group-text">Dificultad para dormir:</span>
+	<span class="input-group-text">Dificultad para dormir:*</span>
 	<select name="DificilDormir" required>
 		<option value="nunca">Nunca</option>
 		<option value="antes">Antes</option>
@@ -135,7 +135,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</select>
 </div>
 <div class="input-group">
-	<span class="input-group-text">Tienes Pesadillas de terrores nocturnos:</span>
+	<span class="input-group-text">Tienes Pesadillas de terrores nocturnos:*</span>
 	<select name="pesadillasTerrorNocturnoA" required>
 		<option value="nunca">Nunca</option>
 		<option value="antes">Antes</option>
@@ -145,7 +145,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</select>
 </div>
 <div class="input-group">
-	<span class="input-group-text">Incontinencia (orina, heces):</span>
+	<span class="input-group-text">Incontinencia (orina, heces):*</span>
 	<select name="incontinencia" required>
 		<option value="nunca">Nunca</option>
 		<option value="antes">Antes</option>
@@ -155,7 +155,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</select>
 </div>
 <div class="input-group">
-	<span class="input-group-text">Tartamudeo a explicarse:</span>
+	<span class="input-group-text">Tartamudeo a explicarse:*</span>
 	<select name="tartamudeo" required>
 		<option value="nunca">Nunca</option>
 		<option value="antes">Antes</option>
@@ -165,7 +165,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</select>
 </div>
 <div class="input-group">
-	<span class="input-group-text">Miedos intensos ante cosas:</span>
+	<span class="input-group-text">Miedos intensos ante cosas:*</span>
 	<select name="miedoIntensoA" required>
 		<option value="nunca">Nunca</option>
 		<option value="antes">Antes</option>
@@ -190,7 +190,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	<tr>
 		<td class="tdtab2">
 			<div class="input-group">
-				<span class="input-group-text">Puntual: </span>
+				<span class="input-group-text">Puntual:* </span>
 			<select name="puntual" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -206,7 +206,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Tímido: </span>
+			<div class="input-group"><span class="input-group-text">Tímido:* </span>
 			<select name="timido" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -221,7 +221,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Alegre:</span>
+			<div class="input-group"><span class="input-group-text">Alegre:*</span>
 			<select name="alegre" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -236,7 +236,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Agresivo:</span>
+			<div class="input-group"><span class="input-group-text">Agresivo:*</span>
 			<select name="agresivo" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -251,7 +251,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Abierto a Ideas: </span>
+			<div class="input-group"><span class="input-group-text">Abierto a Ideas:* </span>
 			<select name="abiertoIdeas" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -266,7 +266,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Reflexivo:</span>
+			<div class="input-group"><span class="input-group-text">Reflexivo:*</span>
 			<select name="reflexivo" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -281,7 +281,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Constante:</span>
+			<div class="input-group"><span class="input-group-text">Constante:*</span>
 			<select name="constante" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -296,7 +296,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Optimista</span>
+			<div class="input-group"><span class="input-group-text">Optimista:*</span>
 			<select name="optimista" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -311,7 +311,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Impulsivo:</span>
+			<div class="input-group"><span class="input-group-text">Impulsivo:*</span>
 			<select name="impulsivo" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -326,7 +326,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Silencioso: </span>
+			<div class="input-group"><span class="input-group-text">Silencioso:*</span>
 			<select name="silencioso" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -341,7 +341,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Generoso:</span>
+			<div class="input-group"><span class="input-group-text">Generoso:*</span>
 			<select name="generoso" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -356,7 +356,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Inquieto:</span>
+			<div class="input-group"><span class="input-group-text">Inquieto:*</span>
 			<select name="inquieto" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -371,7 +371,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Cambios de humor:</span>
+			<div class="input-group"><span class="input-group-text">Cambios de humor:*</span>
 			<select name="humor" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -386,7 +386,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Dominante:</span>
+			<div class="input-group"><span class="input-group-text">Dominante:*</span>
 			<select name="dominante" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -401,7 +401,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Egoísta:</span>
+			<div class="input-group"><span class="input-group-text">Egoísta:*</span>
 			<select name="egoista" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -416,7 +416,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Sumiso:</span>
+			<div class="input-group"><span class="input-group-text">Sumiso:*</span>
 			<select name="sumiso" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -431,7 +431,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Confiado en si mismo:</span>
+			<div class="input-group"><span class="input-group-text">Confiado en si mismo:*</span>
 			<select name="confiado" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -446,7 +446,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Imaginativo:</span>
+			<div class="input-group"><span class="input-group-text">Imaginativo:*</span>
 			<select name="imaginativo" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -461,7 +461,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Con Iniciativa propia:</span>
+			<div class="input-group"><span class="input-group-text">Con Iniciativa propia:9</span>
 			<select name="iniciativa" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -476,7 +476,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Sociable:</span>
+			<div class="input-group"><span class="input-group-text">Sociable:*</span>
 			<select name="sociable" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -491,7 +491,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Responsable:</span>
+			<div class="input-group"><span class="input-group-text">Responsable:*</span>
 			<select name="responsable" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -506,7 +506,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Perseverante:</span>
+			<div class="input-group"><span class="input-group-text">Perseverante:*</span>
 			<select name="perseverante" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -521,7 +521,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Motivado:</span>
+			<div class="input-group"><span class="input-group-text">Motivado:*</span>
 			<select name="motivado" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -536,7 +536,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Activo:</span>
+			<div class="input-group"><span class="input-group-text">Activo:*</span>
 			<select name="activo" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
@@ -551,7 +551,7 @@ if (isset($_SESSION['noControl'])&&$_SESSION['noControl']!=0) {
 	</tr>
 	<tr>
 		<td class="tdtab2">
-			<div class="input-group"><span class="input-group-text">Independiente:</span>
+			<div class="input-group"><span class="input-group-text">Independiente:*</span>
 			<select name="independiente" required>
 		<option selected disabled value="">-----</option>
 				<option value="mucho">Mucho</option>
