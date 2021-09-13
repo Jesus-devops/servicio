@@ -54,16 +54,16 @@ include "../conexion.php";
 </div>	
 	<br>
 <div class="input-group">
-	<span class="input-group-text" >Fotografia (Max. 1MB)</span>
+	<span class="input-group-text" >Fotografia (Max. 1MB)*</span>
 	<input type="FILE" name="file" required id="Fotografia">
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">No. Control</span>
+  <span class="input-group-text">No. Control*</span>
   <input type="number" class="form-control" placeholder="No. Control" id="noC" name="noControl" required="true">
 </div>
 <div class="input-group">
-  <span class="input-group-text" style="margin-left: 15px;">Semestre</span>
+  <span class="input-group-text" style="margin-left: 15px;">Semestre*</span>
 <select name="semestre" required="true"> 
 		<option value="1">1</option>
 		<option value="2">2</option>
@@ -82,7 +82,7 @@ include "../conexion.php";
 </div>
 
 <div class="input-group">
-  <span class="input-group-text" style="margin-left: 15px;">Grupo</span>
+  <span class="input-group-text" style="margin-left: 15px;">Grupo*</span>
 	<select name="grupo" style="margin: 0px;" required="true"> 
 		<option value="A">A</option>
 		<option value="C">C</option>
@@ -93,7 +93,7 @@ include "../conexion.php";
 		<option value="J">J</option>
 		<option value="M">M</option>
 	</select>
-<span class="input-group-text" style="margin-left: 15px;">Turno</span>
+<span class="input-group-text" style="margin-left: 15px;">Turno*</span>
 	<select name="turno"> 
 		<option value=""></option>
 		<option value="Bis">Bis</option>
@@ -105,7 +105,7 @@ include "../conexion.php";
 </div>
 
 <div class="input-group">
-	<span class="input-group-text">Carrera a la que pertenece</span>
+	<span class="input-group-text">Carrera a la que pertenece*</span>
 	<select name="carrera" required="true">
 		<option selected disabled value="">----------</option>
 		<option value="administracion">Administracion</option>
@@ -119,13 +119,13 @@ include "../conexion.php";
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">Nombres</span>
+  <span class="input-group-text">Nombres*</span>
   <input type="text" class="form-control" required="true" name="nombres" placeholder="Nombres" required="true" id="txtmedio">
 </div><div class="input-group">
-  <span class="input-group-text">Apellido Paterno</span>
+  <span class="input-group-text">Apellido Paterno*</span>
   <input type="text" class="form-control" required="true" name="apellidoP"placeholder="Apellido Paterno" required id="txtcorto">
 </div><div class="input-group">
-  <span class="input-group-text">Apellido Materno</span>
+  <span class="input-group-text">Apellido Materno*</span>
   <input type="text" class="form-control" required="true" name="apellidoM"placeholder="Apellido Materno" required id="txtcorto">
 </div>
 
@@ -133,10 +133,10 @@ include "../conexion.php";
 
 
 <div class="input-group">
-  <span class="input-group-text">Edad</span>
-  <input type="number" class="form-control" placeholder="N"  required="true" name="edad" id="n2d" min="10" max="130">
+  <span class="input-group-text">Edad*</span>
+  <input type="number" class="form-control" placeholder="N"  required="true" name="edad" id="n2d" min="15" max="70">
 
-	<span class="input-group-text" style="margin-left: 15px;">Sexo</span>
+	<span class="input-group-text" style="margin-left: 15px;">Sexo*</span>
 	<select name="sexo" required>
 		<option selected disabled value="">-----</option>
 		<option value="H">H</option>
@@ -145,25 +145,25 @@ include "../conexion.php";
 </div>
 
 <div class="input-group" id="largo">
-  <span class="input-group-text">Correo electrónico</span>
+  <span class="input-group-text">Correo electrónico*</span>
   <input type="email" class="form-control" placeholder="ejemplo@outlook.com"  required="true" name="email" id="estudios">
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">Celular 1*</span>
+  <span class="input-group-text">Celular 1</span>
   <input type="number" class="form-control" placeholder="Celular 1" name="celular1" id="tel">
 </div><div class="input-group">
-  <span class="input-group-text">Celular 2*</span>
+  <span class="input-group-text">Celular 2</span>
   <input type="number" class="form-control" placeholder="Celular 2" name="celular2" id="tel">
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">Código Postal</span>
+  <span class="input-group-text">Código Postal*</span>
   <input type="number" class="form-control" placeholder="Código"  required="true" name="CP" id="noC">
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">Escolaridad</span>
+  <span class="input-group-text">Escolaridad*</span>
 	<select name="escolaridad" required>
 		<option selected disabled value="">----------</option>
 		<option value="Preparatoria">Preparatoria</option>
@@ -172,12 +172,12 @@ include "../conexion.php";
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">Nombre de la institución</span>
+  <span class="input-group-text">Nombre de la institución*</span>
   <input type="text" class="form-control" placeholder="Nombre"  required="true" name="nombreInstitucion" id="estudios">
 </div>
 
 <div class="input-group">
-	<span class="input-group-text">¿Trabajas?</span>
+	<span class="input-group-text">¿Trabajas?*</span>
 	<select name="trabaja" required>
 		<option selected disabled value="">-----</option>
 		<option value="si">SI</option>
@@ -185,16 +185,16 @@ include "../conexion.php";
 	</select>
 </div>
 
-<h4>Actualmente tu: </h4>
+<h4>Actualmente tu:* </h4>
 <div class="input-group">
-	<span class="input-group-text">Padre</span>
+	<span class="input-group-text">Padre*</span>
 	<select name="padre" required>
 		<option selected disabled value="">-----</option>
 		<option value="vive">VIVE</option>
 		<option value="finado">FINADO</option>
 	</select>
 
-	<span class="input-group-text" style="margin-left: 15px;">Madre</span>
+	<span class="input-group-text" style="margin-left: 15px;">Madre*</span>
 	<select name="madre" required>
 		<option selected disabled value="">-----</option>
 		<option value="vive">VIVE</option>
@@ -203,12 +203,12 @@ include "../conexion.php";
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">¿Cuantos hermanos tienes?</span>
+  <span class="input-group-text">¿Cuantos hermanos tienes?*</span>
   <input type="number" class="form-control" placeholder="N"  required="true" name="nHermanos" id="n2d">
 </div>
 
 <div class="input-group">
-  <span class="input-group-text">¿Has estado becado?</span>
+  <span class="input-group-text">¿Has estado becado?*</span>
   <select name="becado" required>
 		<option selected disabled value="">-----</option>
 		<option value="si">SI</option>
