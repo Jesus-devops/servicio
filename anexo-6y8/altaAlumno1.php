@@ -1,8 +1,6 @@
 <?php
 include "../conexion.php";
-
 	$noC=0;
-
 		$allowedExts = array("jpeg", "jpg", "png","xbm","xpm","wbmp","tiff","psd","bmp");
 			$temp = explode(".", $_FILES["file"]["name"]);
 			$extension = end($temp);
@@ -31,6 +29,7 @@ include "../conexion.php";
 		      	}else{
 		      		move_uploaded_file($_FILES["file"]["tmp_name"],
 		      		"./fotos/" .$random.'_'.$_FILES["file"]["name"]);
+					  //igual
 		      		
 		$re=$mysql->query("select noControl from alumno where noControl=".$_POST['noControl'])or die($mysql-> error);
 			
@@ -47,13 +46,15 @@ include "../conexion.php";
 					$_SESSION['madre']=$_POST['madre'];
 					$_SESSION['nHermanos']=$_POST['nHermanos'];
 
-		echo '<script type="text/javascript"> alert("ya existe este numero de control"); window.location.href="alumno2.php";</script>';
+		echo '<script type="text/javascript"> alert("ya existe este numero de control"); 
+		window.location.href="alumno2.php";</script>';
 
 				
 		}else{
 		
 
-	$Sql="insert into alumno (noControl,foto,carrera,semestre,grupo,turno,apellidoP,apellidoM,nombres,fecha,sexo,edad,email,CP,escolaridad,nombreInstitucion,trabaja,padre,madre,nHermanos,becado,idAsesor) values(
+	$Sql="insert into alumno (noControl,foto,carrera,semestre,grupo,turno,apellidoP,apellidoM,nombres,fecha,sexo,
+	edad,email,CP,escolaridad,nombreInstitucion,trabaja,padre,madre,nHermanos,becado,idAsesor) values(
 				".$_POST['noControl'].",
 				'".$foto."',
 				'".$_POST['carrera']."',
